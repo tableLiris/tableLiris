@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>scrabble.html</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<div style="position: relative;">
+			<canvas id="background" width="0" height="0" style="position: absolute; left: 0; top : 0; z-index: 0;"></canvas>
+			<canvas id="foreground" width="0" height="0" style="position: absolute; left: 0; top : 0; z-index: 1;"></canvas>
+		</div>
+		<script src="../../libs/prototype-1.6.0.2.js"></script>
+		<script src="../../libs/jquery-1.7.2.js"></script>
+		<script src="../../libs/requestanimationframe.js"></script>
+		<script src='../../js/box2d/common/b2Settings.js'></script>
+		<script src='../../js/box2d/common/math/b2Vec2.js'></script>
+		<script src='../../js/box2d/common/math/b2Mat22.js'></script>
+		<script src='../../js/box2d/common/math/b2Math.js'></script>
+		<script src='../../js/box2d/collision/b2AABB.js'></script>
+		<script src='../../js/box2d/collision/b2Bound.js'></script>
+		<script src='../../js/box2d/collision/b2BoundValues.js'></script>
+		<script src='../../js/box2d/collision/b2Pair.js'></script>
+		<script src='../../js/box2d/collision/b2PairCallback.js'></script>
+		<script src='../../js/box2d/collision/b2BufferedPair.js'></script>
+		<script src='../../js/box2d/collision/b2PairManager.js'></script>
+		<script src='../../js/box2d/collision/b2BroadPhase.js'></script>
+		<script src='../../js/box2d/collision/b2Collision.js'></script>
+		<script src='../../js/box2d/collision/Features.js'></script>
+		<script src='../../js/box2d/collision/b2ContactID.js'></script>
+		<script src='../../js/box2d/collision/b2ContactPoint.js'></script>
+		<script src='../../js/box2d/collision/b2Distance.js'></script>
+		<script src='../../js/box2d/collision/b2Manifold.js'></script>
+		<script src='../../js/box2d/collision/b2OBB.js'></script>
+		<script src='../../js/box2d/collision/b2Proxy.js'></script>
+		<script src='../../js/box2d/collision/ClipVertex.js'></script>
+		<script src='../../js/box2d/collision/shapes/b2Shape.js'></script>
+		<script src='../../js/box2d/collision/shapes/b2ShapeDef.js'></script>
+		<script src='../../js/box2d/collision/shapes/b2BoxDef.js'></script>
+		<script src='../../js/box2d/collision/shapes/b2CircleDef.js'></script>
+		<script src='../../js/box2d/collision/shapes/b2CircleShape.js'></script>
+		<script src='../../js/box2d/collision/shapes/b2MassData.js'></script>
+		<script src='../../js/box2d/collision/shapes/b2PolyDef.js'></script>
+		<script src='../../js/box2d/collision/shapes/b2PolyShape.js'></script>
+		<script src='../../js/box2d/dynamics/b2Body.js'></script>
+		<script src='../../js/box2d/dynamics/b2BodyDef.js'></script>
+		<script src='../../js/box2d/dynamics/b2CollisionFilter.js'></script>
+		<script src='../../js/box2d/dynamics/b2Island.js'></script>
+		<script src='../../js/box2d/dynamics/b2TimeStep.js'></script>
+		<script src='../../js/box2d/dynamics/contacts/b2ContactNode.js'></script>
+		<script src='../../js/box2d/dynamics/contacts/b2Contact.js'></script>
+		<script src='../../js/box2d/dynamics/contacts/b2ContactConstraint.js'></script>
+		<script src='../../js/box2d/dynamics/contacts/b2ContactConstraintPoint.js'></script>
+		<script src='../../js/box2d/dynamics/contacts/b2ContactRegister.js'></script>
+		<script src='../../js/box2d/dynamics/contacts/b2ContactSolver.js'></script>
+		<script src='../../js/box2d/dynamics/contacts/b2CircleContact.js'></script>
+		<script src='../../js/box2d/dynamics/contacts/b2Conservative.js'></script>
+		<script src='../../js/box2d/dynamics/contacts/b2NullContact.js'></script>
+		<script src='../../js/box2d/dynamics/contacts/b2PolyAndCircleContact.js'></script>
+		<script src='../../js/box2d/dynamics/contacts/b2PolyContact.js'></script>
+		<script src='../../js/box2d/dynamics/b2ContactManager.js'></script>
+		<script src='../../js/box2d/dynamics/b2World.js'></script>
+		<script src='../../js/box2d/dynamics/b2WorldListener.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2JointNode.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2Joint.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2JointDef.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2DistanceJoint.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2DistanceJointDef.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2Jacobian.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2GearJoint.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2GearJointDef.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2MouseJoint.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2MouseJointDef.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2PrismaticJoint.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2PrismaticJointDef.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2PulleyJoint.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2PulleyJointDef.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2RevoluteJoint.js'></script>
+		<script src='../../js/box2d/dynamics/joints/b2RevoluteJointDef.js'></script>
+		<script src='../../libs/draw_world.js'></script>
+		<script src="../../libs/lodash.js"></script>
+		<script src="../../libs/socket.io.js"></script>
+		<script src="../../dist/Tuio.js"></script>
+		<script src="../../dist/hammer.js"></script>
+		<script src="../../dist/Pattern.js"></script>
+		<script src="../../dist/Shape.js"></script>
+		<script src="../../dist/Circle.js"></script>
+		<script src="../../dist/Rectangle.js"></script>
+		<script src="../../dist/Manager.js"></script>
+		<script src="Case.js"></script>
+		<script>
+		$.noConflict();
+		jQuery(document).ready(function($) {
+			Hammer.plugins.fakeMultitouch();
+			var client = new Tuio.Client({
+				host: "http://localhost:5000"
+			}),
+			screenW = $(window).width(),
+			screenH = $(window).height(),
+			manager = new Manager(),
+			canvasbackground = null, 
+			contextbackground = null,
+			canvasforeground = null, 
+			contextforeground = null,
+			plateau = new Rectangle(),
+			matrice = new Array(),
+			rectPlateau = [],
+			nouveauTour = true;
+			var lettresModifiees = new Array();
+			lettresModifiees[0] = new Array();
+			lettresModifiees[1] = new Array();
+			var lettresScore = new Array();
+			lettresScore[0] = new Array();
+			lettresScore[1] = new Array();
+			var lettreAPlacer = "",
+			rectTouch = null,
+			okButton = new Case(),
+			cancelButton = new Case(),
+			blobAlive = null,
+			casePourPlacer = null,
+			joueurActuel = 0,
+			gameStarted = false,
+			lettres = [' ',' ','E','E','E','E','E','E','E','E','E','E','E','E','E','E','E','A','A','A','A','A','A','A','A','A','I','I','I','I','I','I','I','I','N','N','N','N','N','N','O','O','O','O','O','O','R','R','R','R','R','R','S','S','S','S','S','S','T','T','T','T','T','T','U','U','U','U','U','U','L','L','L','L','L','D','D','D','M','M','M','G','G','B','B','C','C','P','P','F','F','H','H','V','V','J','Q','K','W','X','Y','Z'],
+			socket = io.connect("127.0.0.1:1337");
+
+            console.log("connected");
+            var nbJoueurs = new Array();
+            nbJoueurs[0] = new Array();
+			nbJoueurs[1] = new Array();
+            socket.on("news", function(data) {
+            	socket.emit("table", data.hello);
+            });
+
+            //Create the matrix that represent the board
+            for (var i = 0; i < 15; i++) {
+            	matrice[i] = new Array();
+            	for (var j = 0; j < 15; j++) {
+            		matrice[i][j] = 'V';
+            	}
+            }
+            matrice[0][0] = 'R';
+            matrice[7][0] = 'R';
+            matrice[14][0] = 'R';
+            matrice[14][7] = 'R';
+            matrice[14][14] = 'R';
+            matrice[7][14] = 'R';
+            matrice[0][14] = 'R';
+            matrice[0][7] = 'R';
+
+            matrice[1][1] = 'T';
+            matrice[2][2] = 'T';
+            matrice[3][3] = 'T';
+            matrice[4][4] = 'T';
+            matrice[13][13] = 'T';
+            matrice[12][12] = 'T';
+            matrice[11][11] = 'T';
+            matrice[10][10] = 'T';
+            matrice[1][13] = 'T';
+            matrice[2][12] = 'T';
+            matrice[3][11] = 'T';
+            matrice[4][10] = 'T';
+            matrice[10][4] = 'T';
+            matrice[11][3] = 'T';
+            matrice[12][2] = 'T';
+            matrice[13][1] = 'T';
+            matrice[7][7] = 'T';
+
+            matrice[5][5] = 'B';
+            matrice[9][9] = 'B';
+            matrice[5][9] = 'B';
+            matrice[9][5] = 'B';
+            matrice[5][1] = 'B';
+            matrice[9][1] = 'B';
+            matrice[1][9] = 'B';
+            matrice[1][5] = 'B';
+            matrice[5][13] = 'B';
+            matrice[9][13] = 'B';
+            matrice[13][9] = 'B';
+            matrice[13][5] = 'B';
+
+            matrice[6][6] = 'C';
+            matrice[8][8] = 'C';
+            matrice[8][6] = 'C';
+            matrice[6][8] = 'C';
+            matrice[0][3] = 'C';
+            matrice[0][11] = 'C';
+            matrice[11][0] = 'C';
+            matrice[3][0] = 'C';
+            matrice[14][3] = 'C';
+            matrice[14][11] = 'C';
+            matrice[3][14] = 'C';
+            matrice[11][14] = 'C';
+            matrice[2][8] = 'C';
+            matrice[2][6] = 'C';
+            matrice[3][7] = 'C';
+            matrice[8][2] = 'C';
+            matrice[6][2] = 'C';
+            matrice[7][3] = 'C';
+            matrice[8][12] = 'C';
+            matrice[6][12] = 'C';
+            matrice[7][11] = 'C';
+            matrice[12][8] = 'C';
+            matrice[12][6] = 'C';
+            matrice[11][7] = 'C';
+
+            // Draw the board
+            drawPlateau = function() {
+            	for (var i = 0; i < rectPlateau.length; i++) {
+            		manager.removeRectangle(rectPlateau[i]);
+            		delete rectPlateau[i];
+            	}
+
+            	for (var i = 0; i < 15; i++) {
+            		for (var j = 0; j < 15; j++) {
+            			r = new Case();
+            			r.setCanvasSize(canvasbackground.width,canvasbackground.height);
+            			r.setContext(contextbackground);
+            			r.setRelativeHeight(0.06);
+						r.setAbsoluteWidth(r.getAbsoluteHeight());
+						r.setXRelativePosition(0.5 + (7 - i) * 0.066 * canvasbackground.height / canvasbackground.width);
+						r.setYRelativePosition(0.5 + (7 - j) * 0.066);
+						r.setPosI(i);
+						r.setPosJ(j);
+            			if (matrice[i][j] == 'R') {
+            				r.setColor("#FF0000");
+            				r.setSpecial("W3");		// Word x3
+            			} else if (matrice[i][j] == 'T') {
+            				r.setColor("#FF00FF");
+            				r.setSpecial("W2");		// word x2
+            			} else if (matrice[i][j] == "B") {
+            				r.setColor("#0000FF");
+            				r.setSpecial("L3");		// letter x3
+            			} else if (matrice[i][j] == "C") {
+            				r.setColor("#20D3EA");
+            				r.setSpecial("L2");		// letter x2
+            			} else {
+            				r.setColor("#8DEA12");
+            			}
+
+            			rectPlateau.push(r);
+            			manager.addRectangle(r);
+            		}
+            	}
+            },
+
+            // Gesture recognition function
+			gesture = function(event) {
+				if (event.type == "release") {
+					// End of pinch event, rotate event and drag event
+				}
+			},
+
+			// Pick a random letter
+			pickLetter = function() {
+				if (lettres.length > 0) {
+					var choix = Math.floor((Math.random()*(lettres.length - 1))); 
+					var lettre = lettres[choix];
+					lettres.splice(choix,1);
+					return lettre;
+				} else {
+					return -1;
+				}
+			},
+
+			// Send 7 letters to a player
+			sendLetters = function(id) {
+					var l1 = pickLetter();
+					var l2 = pickLetter();
+					var l3 = pickLetter();
+					var l4 = pickLetter();
+					var l5 = pickLetter();
+					var l6 = pickLetter();
+					var l7 = pickLetter();
+					var msg = {lettre1: l1, lettre2: l2, lettre3: l3, lettre4: l4, lettre5: l5, lettre6: l6, lettre7:l7, joueur: id, pos: nbJoueurs[0].length};
+					socket.emit('distrib',msg);
+			},
+
+			// Record a new gamer
+			socket.on("joueur", function(data) {
+            	if (!gameStarted) {
+            		console.log(data.identifiant);
+	            	nbJoueurs[0].push(data.identifiant);
+	            	nbJoueurs[1].push(0);
+	            	sendLetters(data.identifiant);
+	            	// If 2 gamers are recorded, start the game
+	            	if (nbJoueurs[0].length == 2) {
+	            		console.log('DEBUT');
+	            		msg = {identifiant: nbJoueurs[0][0], pos: 1};
+	            		socket.emit('debutTour', msg);
+	            		joueurActuel = 1;
+	            		gameStarted = true;
+	            	}
+            	}
+            });
+				
+			// When a player put a letter on the board
+			socket.on("placerLettre", function(data) {
+				var obj = JSON.parse(data);
+				console.log(obj[0].l);
+				lettreAPlacer = obj[0].l;
+				if (nouveauTour) {
+					lettresModifiees = new Array();
+					lettresModifiees[0] = new Array();
+					lettresModifiees[1] = new Array();
+					nouveauTour = false;
+				}
+			});
+
+			// When a player finish his turn
+			socket.on('finTour', function(data) {
+				if (joueurActuel == nbJoueurs[0].length) {
+					joueurActuel = 1;
+				} else {
+					joueurActuel++;
+				}
+				msg = {identifiant: nbJoueurs[0][joueurActuel-1], pos: joueurActuel};
+        		socket.emit('debutTour', msg);
+        		console.log("joueur " + joueurActuel);
+			});
+
+			// When a player ask for new letters
+			socket.on('changeLetters', function(data) {
+				var n = new Array();
+				n = [];
+				if (lettres.length < 7) {
+					//TODO : error, too few letters
+				} else {
+					for (var i = 0; i < data.l.length; i++) {
+						n.push(pickLetter());
+					}
+					var msg = {l : n, identifiant: data.identifiant};
+					console.log("envoie lettre ! " + n.length);
+					socket.emit('newLetters', msg);
+
+					for (var i = 0; i < data.l.length; i++) {
+						lettres.push(data.l[i]);
+					}
+				}
+				
+			});
+
+			// Init function
+			onConnect = function() {
+				// Canvas Init
+				canvasbackground = $("#background").get(0);
+				canvasbackground.width=screenW * 1.0;
+				canvasbackground.height=screenH * 1.0;
+				canvasbackground.style.left = screenW * 0.0 + "px";
+				canvasbackground.style.top = screenH * 0.0 + "px";
+				contextbackground = canvasbackground.getContext("2d");
+				canvasforeground = $("#foreground").get(0);
+				canvasforeground.width=screenW * 1.0;
+				canvasforeground.height=screenH * 1.0;
+				canvasforeground.style.left = screenW * 0.0 + "px";
+				canvasforeground.style.top = screenH * 0.0 + "px";
+				contextforeground = canvasforeground.getContext("2d");
+				time = new Date().getTime();
+
+				//Manager Init
+				manager.setScreenSize(screenW, screenH);
+				manager.setOnGesture(gesture);
+
+				// Add the buttons
+				okButton.setCanvasSize(canvasforeground.width, canvasforeground.height);
+				okButton.setContext(contextforeground);
+				okButton.setRelativeHeight(0.08);
+				okButton.setAbsoluteWidth(okButton.getAbsoluteHeight() * 1.4);
+				okButton.setXRelativePosition(0.95);
+				okButton.setYRelativePosition(0.4);
+				okButton.setColor("#FFFFFF");
+				okButton.setLetter("O");
+				manager.addRectangle(okButton);
+
+				cancelButton.setCanvasSize(canvasforeground.width, canvasforeground.height);
+				cancelButton.setContext(contextforeground);
+				cancelButton.setRelativeHeight(0.08);
+				cancelButton.setAbsoluteWidth(cancelButton.getAbsoluteHeight() * 1.4);
+				cancelButton.setXRelativePosition(0.95);
+				cancelButton.setYRelativePosition(0.6);
+				cancelButton.setColor("#FFFFFF");
+				cancelButton.setLetter("X");
+				manager.addRectangle(cancelButton);
+
+				// Fill the screen with black
+				contextbackground.fillStyle = "#000000";
+				contextbackground.fillRect(0, 0, canvasbackground.width, canvasbackground.height);
+
+				drawPlateau();
+			};
+
+			// Return if a blob still exist or not
+			blobExist = function(blobs) {
+				for (var i in blobs) {
+					if (blobs[i].getSessionId() == blobAlive){
+						return true;
+					}
+				}
+				return false;
+			};
+
+			// Return the score of a letter
+			scoreLettre = function(l) {
+				console.log("lettre : " + l);
+				switch(l) {
+					case 'A':
+						return 1;
+						break;
+					case 'B':
+						return 3;
+						break;
+					case 'C':
+						return 3;
+						break;
+					case 'D':
+						return 2;
+						break;
+					case 'E':
+						return 1;
+						break;
+					case 'F':
+						return 4;
+						break;
+					case 'G':
+						return 2;
+						break;
+					case 'H':
+						return 4;
+						break;
+					case 'I':
+						return 1;
+						break;
+					case 'J':
+						return 8;
+						break;
+					case 'K':
+						return 10;
+						break;
+					case 'L':
+						return 1;
+						break;
+					case 'M':
+						return 2;
+						break;
+					case 'N':
+						return 1;
+						break;
+					case 'O':
+						return 1;
+						break;
+					case 'P':
+						return 3;
+						break;
+					case 'Q':
+						return 8;
+						break;
+					case 'R':
+						return 1;
+						break;
+					case 'S':
+						return 1;
+						break;
+					case 'T':
+						return 1;
+						break;
+					case 'U':
+						return 1;
+						break;
+					case 'V':
+						return 4;
+						break;
+					case 'W':
+						return 10;
+						break;
+					case 'X':
+						return 10;
+						break;
+					case 'Y':
+						return 10;
+						break;
+					case 'Z':
+						return 10;
+						break;
+				}
+				return 0;
+			}
+
+			// Draw the objects
+			setInterval(draw = function() {
+				
+				contextforeground.clearRect(0, 0, canvasforeground.width, canvasforeground.height);
+				var blobs = client.getTuioBlobs();
+
+				// Print the score of the players
+				for (var i = 0; i < nbJoueurs[0].length; i++) {
+					contextforeground.font = "30px Arial";
+		            contextforeground.fillStyle = "#FFFFFF";
+		            contextforeground.fillText("Joueur " + (i + 1) + " : " + nbJoueurs[1][i], 50, 30 * i + 30);
+				}
+
+				for (var i in blobs) {
+					var obj = manager.getObjects(blobs[i].getScreenX(screenW), blobs[i].getScreenY(screenH));
+					if (obj.length == 1) {
+						// Put a letter on the board
+						if (lettreAPlacer != "" && obj[0] != okButton && obj[0] != cancelButton) {
+							if (blobAlive != blobs[i].getSessionId()) {
+								blobAlive = blobs[i].getSessionId();
+							}
+							if (casePourPlacer != null) {
+								if (casePourPlacer.getLetter() != "") {
+		            				if (casePourPlacer.isValide()) {
+		            					casePourPlacer.setColor("#FFF399");
+		            				} else {
+		            					casePourPlacer.setColor("#FFFFFF");
+		            				}
+								}else if (matrice[casePourPlacer.getPosI()][casePourPlacer.getPosJ()] == 'R') {
+		            				casePourPlacer.setColor("#FF0000");
+		            			} else if (matrice[casePourPlacer.getPosI()][casePourPlacer.getPosJ()] == 'T') {
+		            				casePourPlacer.setColor("#FF00FF");
+		            			} else if (matrice[casePourPlacer.getPosI()][casePourPlacer.getPosJ()] == "B") {
+		            				casePourPlacer.setColor("#0000FF");
+		            			} else if (matrice[casePourPlacer.getPosI()][casePourPlacer.getPosJ()] == "C") {
+		            				casePourPlacer.setColor("#20D3EA");
+		            			} else {
+		            				casePourPlacer.setColor("#8DEA12");
+		            			}
+							} 
+							
+							casePourPlacer = obj[0];
+							if (casePourPlacer.isValide()){
+								casePourPlacer.setColor("#FFF399");
+							} else {
+								casePourPlacer.setColor("#FFFFFF");
+							}
+	            			break;
+	            		// Click on the "OK" button
+						} else if (obj[0] == okButton) {
+							if (lettresModifiees[0].length > 0) {
+								nouveauTour = true;
+								var lettresScore = new Array();
+								lettresScore[0] = new Array();
+								lettresScore[1] = new Array();
+
+								for (var i = 0; i < lettresModifiees[0].length; i++) {								
+									for (var j = 0; j < rectPlateau.length; j++) {
+										if (rectPlateau[j].getPosI() == lettresModifiees[0][i] && rectPlateau[j].getPosJ() == lettresModifiees[1][i]) {
+											rectPlateau[j].setColor("#FFF399");
+											rectPlateau[j].setValide(true);
+										}
+									}
+									lettresScore[0].push(lettresModifiees[0][i]);
+									lettresScore[1].push(lettresModifiees[1][i]);
+								}
+
+								//calculation of the score
+								var score = 0;
+								var multiplicateur = 1;
+								for (var i = 0; i < lettresModifiees[0].length; i++) {
+									for (var j = 0; j < rectPlateau.length; j++) {
+										if (rectPlateau[j].getPosI() == lettresModifiees[0][i] && rectPlateau[j].getPosJ() == lettresModifiees[1][i]) {
+											var s = scoreLettre(rectPlateau[j].getLetter());
+											console.log("score lettre : " + s);
+											if (rectPlateau[j].getSpecial() == "L2") {
+												s *= 2;
+											} else if (rectPlateau[j].getSpecial() == "L3") {
+												s *= 3;
+											} else if (rectPlateau[j].getSpecial() == "W2") {
+												multiplicateur *= 2;
+											} else if (rectPlateau[j].getSpecial() == "W3") {
+												multiplicateur *= 3;
+											}
+											score += s;	
+											break;
+										}
+									}
+									for (var k = 0; k < rectPlateau.length; k++) {
+										if (rectPlateau[k].getLetter() != "" && rectPlateau[k].getPosI() == lettresModifiees[0][i] + 1 && rectPlateau[k].getPosJ() == lettresModifiees[1][i]) {
+											var skip = false;
+											for (var l = 0; l < lettresScore[0].length; l++) {
+												if (lettresScore[0][l] == lettresModifiees[0][i] + 1 && lettresScore[1][l] == lettresModifiees[1][i]) {
+													skip = true;
+													break;
+												}
+											}
+											if (!skip) {
+												score += scoreLettre(rectPlateau[k].getLetter());
+												lettresScore[0].push(rectPlateau[k].getPosI());
+												lettresScore[1].push(rectPlateau[k].getPosJ());
+												var ligne = rectPlateau[k].getPosJ();
+												var col = rectPlateau[k].getPosI() + 1;
+												var piece = true;
+												var dejaCompte = false;
+												while (piece && col < 15 && !dejaCompte) {
+													piece = false;
+													for (var m = 0; m < rectPlateau.length; m++) {
+														if (rectPlateau[m].getLetter() != "" && rectPlateau[m].getPosI() == col && rectPlateau[m].getPosJ() == ligne) {
+															for (var n = 0; n < lettresScore[0].length; n++) {
+																if (rectPlateau[m].getPosI() == lettresScore[0][n] && rectPlateau[m].getPosJ() == lettresScore[1][n]) {
+																	dejaCompte = true;
+																}
+															}
+															if (!dejaCompte) {
+																piece = true;
+																score += scoreLettre(rectPlateau[m].getLetter());
+																lettresScore[0].push(rectPlateau[m].getPosI());
+																lettresScore[1].push(rectPlateau[m].getPosJ());
+																break;
+															}
+														}
+													}
+													col++;
+												}
+											}
+										} else if (rectPlateau[k].getLetter() != "" && rectPlateau[k].getPosI() == lettresModifiees[0][i] - 1 && rectPlateau[k].getPosJ() == lettresModifiees[1][i]) {
+											var skip = false;
+											for (var l = 0; l < lettresScore[0].length; l++) {
+												if (lettresScore[0][l] == lettresModifiees[0][i] - 1 && lettresScore[1][l] == lettresModifiees[1][i]) {
+													skip = true;
+													break;
+												}
+											}
+											if (!skip) {
+												score += scoreLettre(rectPlateau[k].getLetter());
+												lettresScore[0].push(rectPlateau[k].getPosI());
+												lettresScore[1].push(rectPlateau[k].getPosJ());
+												var ligne = rectPlateau[k].getPosJ();
+												var col = rectPlateau[k].getPosI() - 1;
+												var piece = true;
+												var dejaCompte = false;
+												while (piece && col >= 0) {
+													piece = false;
+													for (var m = 0; m < rectPlateau.length; m++) {
+														if (rectPlateau[m].getLetter() != "" && rectPlateau[m].getPosI() == col && rectPlateau[m].getPosJ() == ligne) {
+															for (var n = 0; n < lettresScore[0].length; n++) {
+																if (rectPlateau[m].getPosI() == lettresScore[0][n] && rectPlateau[m].getPosJ() == lettresScore[1][n]) {
+																	dejaCompte = true;
+																}
+															}
+															if (!dejaCompte) {
+																piece = true;
+																score += scoreLettre(rectPlateau[m].getLetter());
+																lettresScore[0].push(rectPlateau[m].getPosI());
+																lettresScore[1].push(rectPlateau[m].getPosJ());
+																break;
+															}
+														}
+													}
+													col--;
+												}
+											}
+										} else if (rectPlateau[k].getLetter() != "" && rectPlateau[k].getPosI() == lettresModifiees[0][i] && rectPlateau[k].getPosJ() == lettresModifiees[1][i] + 1) {
+											var skip = false;
+											for (var l = 0; l < lettresScore[0].length; l++) {
+												if (lettresScore[0][l] == lettresModifiees[0][i] && lettresScore[1][l] == lettresModifiees[1][i] + 1) {
+													skip = true;
+													break;
+												}
+											}
+											if (!skip) {
+												score += scoreLettre(rectPlateau[k].getLetter());
+												lettresScore[0].push(rectPlateau[k].getPosI());
+												lettresScore[1].push(rectPlateau[k].getPosJ());
+												var ligne = rectPlateau[k].getPosJ() + 1;
+												var col = rectPlateau[k].getPosI();
+												var piece = true;
+												var dejaCompte = false;
+												while (piece && ligne < 15) {
+													piece = false;
+													for (var m = 0; m < rectPlateau.length; m++) {
+														if (rectPlateau[m].getLetter() != "" && rectPlateau[m].getPosI() == col && rectPlateau[m].getPosJ() == ligne) {
+															for (var n = 0; n < lettresScore[0].length; n++) {
+																if (rectPlateau[m].getPosI() == lettresScore[0][n] && rectPlateau[m].getPosJ() == lettresScore[1][n]) {
+																	dejaCompte = true;
+																}
+															}
+															if (!dejaCompte) {
+																piece = true;
+																score += scoreLettre(rectPlateau[m].getLetter());
+																lettresScore[0].push(rectPlateau[m].getPosI());
+																lettresScore[1].push(rectPlateau[m].getPosJ());
+																break;
+															}
+														}
+													}
+													ligne++;
+												}
+											}
+										} else if (rectPlateau[k].getLetter() != "" && rectPlateau[k].getPosI() == lettresModifiees[0][i] && rectPlateau[k].getPosJ() == lettresModifiees[1][i] - 1) {
+											var skip = false;
+											for (var l = 0; l < lettresScore[0].length; l++) {
+												if (lettresScore[0][l] == lettresModifiees[0][i] && lettresScore[1][l] == lettresModifiees[1][i] - 1) {
+													skip = true;
+													break;
+												}
+											}
+											if (!skip) {
+												score += scoreLettre(rectPlateau[k].getLetter());
+												lettresScore[0].push(rectPlateau[k].getPosI());
+												lettresScore[1].push(rectPlateau[k].getPosJ());
+												var ligne = rectPlateau[k].getPosJ() - 1;
+												var col = rectPlateau[k].getPosI();
+												var piece = true;
+												var dejaCompte = false;
+												while (piece && ligne >= 0) {
+													piece = false;
+													for (var m = 0; m < rectPlateau.length; m++) {
+														if (rectPlateau[m].getLetter() != "" && rectPlateau[m].getPosI() == col && rectPlateau[m].getPosJ() == ligne) {
+															for (var n = 0; n < lettresScore[0].length; n++) {
+																if (rectPlateau[m].getPosI() == lettresScore[0][n] && rectPlateau[m].getPosJ() == lettresScore[1][n]) {
+																	dejaCompte = true;
+																}
+															}
+															if (!dejaCompte) {
+																piece = true;
+																score += scoreLettre(rectPlateau[m].getLetter());
+																lettresScore[0].push(rectPlateau[m].getPosI());
+																lettresScore[1].push(rectPlateau[m].getPosJ());
+																break;
+															}
+														}
+													}
+													ligne--;
+												}
+											}
+										}
+									}
+								}
+								console.log(score);
+								score *= multiplicateur;
+								nbJoueurs[1][joueurActuel-1] += score;
+								console.log(score);
+								console.log(nbJoueurs);
+
+								var newLetters = [];
+								for (var i = 0; i < lettresModifiees[0].length; i++) {
+									newLetters.push(pickLetter());
+								}
+
+								lettresModifiees = new Array();
+								lettresModifiees[0] = new Array();
+								lettresModifiees[1] = new Array();
+
+								msg = {newL : newLetters, identifiant: nbJoueurs[0][joueurActuel - 1]};
+								socket.emit('motValide',msg);
+								console.log("OK !");
+								if (joueurActuel == nbJoueurs[0].length) {
+									joueurActuel = 1;
+								} else {
+									joueurActuel++;
+								}
+								console.log("joueur " + joueurActuel);
+								msg = {identifiant: nbJoueurs[0][joueurActuel-1], pos: joueurActuel};
+				        		socket.emit('debutTour', msg);
+							}
+						// click on the cancel button
+						} else if (obj[0] == cancelButton){
+							for (var i = 0; i < lettresModifiees[0].length; i++) {								
+								for (var j = 0; j < rectPlateau.length; j++) {
+									if (rectPlateau[j].getPosI() == lettresModifiees[0][i] && rectPlateau[j].getPosJ() == lettresModifiees[1][i]) {
+										console.log("rrrrrrrrrrr");
+										rectPlateau[j].setLetter("");
+										if (matrice[lettresModifiees[0][i]][lettresModifiees[1][i]] == 'R') {
+				            				rectPlateau[j].setColor("#FF0000");
+				            			} else if (matrice[lettresModifiees[0][i]][lettresModifiees[1][i]] == 'T') {
+				            				rectPlateau[j].setColor("#FF00FF");
+				            			} else if (matrice[lettresModifiees[0][i]][lettresModifiees[1][i]] == "B") {
+				            				rectPlateau[j].setColor("#0000FF");
+				            			} else if (matrice[lettresModifiees[0][i]][lettresModifiees[1][i]] == "C") {
+				            				rectPlateau[j].setColor("#20D3EA")
+				            			} else {
+				            				rectPlateau[j].setColor("#8DEA12");
+				            			}
+										break;
+									}
+								}
+							}
+							lettresModifiees = new Array();
+							lettresModifiees[0] = new Array();
+							lettresModifiees[1] = new Array();
+							nouveauTour = true;
+							socket.emit('motAnnule',"");
+							console.log("Cancel !");
+						}
+					}
+				}
+
+				if (blobAlive != null && !blobExist(blobs) && casePourPlacer != null){
+
+            			if (casePourPlacer.getLetter() == '') {
+            				casePourPlacer.setColor("#FFFFFF");
+            				casePourPlacer.setLetter(lettreAPlacer);
+	            			lettresModifiees[0][lettresModifiees[0].length] = casePourPlacer.getPosI();
+	            			lettresModifiees[1][lettresModifiees[1].length] = casePourPlacer.getPosJ();
+	            			lettreAPlacer = "";
+            			}
+            			socket.emit('lettreOK',"");
+            			blobAlive = null;
+            			casePourPlacer = null;
+					}
+
+
+				manager.drawCircle();
+				manager.drawRectangle();
+				manager.drawBlobs(blobs);
+
+				for (var i in blobs) {
+					blobs[i].removePhysics(manager.getWorld());
+				}
+			},100);
+
+			// New blob event
+			onAddTuioBlob = function(blb) {
+				manager.addEvent(blb);
+			},
+
+			// Removed blob event
+			onRemoveTuioBlob = function(blb) {
+				manager.removeEvent(blb);
+			},
+
+			// Updated blob event
+			onUpdateTuioBlob = function(blb) {
+				manager.updateEvent(blb);
+			};
+
+			client.on("connect", onConnect);
+			client.on("addTuioBlob", onAddTuioBlob);
+			client.on("updateTuioBlob", onUpdateTuioBlob);
+			client.on("removeTuioBlob", onRemoveTuioBlob);
+			client.connect();
+		});
+		</script>
+	</body>
+</html>

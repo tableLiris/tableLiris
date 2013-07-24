@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Physics.js</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div style="position: relative;">
+            <canvas id="tuioCanvas" width="1680" height="645" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+            <canvas id="fixe" width="1680" height="645" style="position : absolute; left: 0; top: 0; z-index: 0;"></canvas>
+        </div>
+        <script src="../../libs/prototype-1.6.0.2.js"></script>
+        <script src="../../libs/jquery-1.7.2.js"></script>
+        <script src="../../libs/requestanimationframe.js"></script>
+        <script src='../../js/box2d/common/b2Settings.js'></script>
+        <script src='../../js/box2d/common/math/b2Vec2.js'></script>
+        <script src='../../js/box2d/common/math/b2Mat22.js'></script>
+        <script src='../../js/box2d/common/math/b2Math.js'></script>
+        <script src='../../js/box2d/collision/b2AABB.js'></script>
+        <script src='../../js/box2d/collision/b2Bound.js'></script>
+        <script src='../../js/box2d/collision/b2BoundValues.js'></script>
+        <script src='../../js/box2d/collision/b2Pair.js'></script>
+        <script src='../../js/box2d/collision/b2PairCallback.js'></script>
+        <script src='../../js/box2d/collision/b2BufferedPair.js'></script>
+        <script src='../../js/box2d/collision/b2PairManager.js'></script>
+        <script src='../../js/box2d/collision/b2BroadPhase.js'></script>
+        <script src='../../js/box2d/collision/b2Collision.js'></script>
+        <script src='../../js/box2d/collision/Features.js'></script>
+        <script src='../../js/box2d/collision/b2ContactID.js'></script>
+        <script src='../../js/box2d/collision/b2ContactPoint.js'></script>
+        <script src='../../js/box2d/collision/b2Distance.js'></script>
+        <script src='../../js/box2d/collision/b2Manifold.js'></script>
+        <script src='../../js/box2d/collision/b2OBB.js'></script>
+        <script src='../../js/box2d/collision/b2Proxy.js'></script>
+        <script src='../../js/box2d/collision/ClipVertex.js'></script>
+        <script src='../../js/box2d/collision/shapes/b2Shape.js'></script>
+        <script src='../../js/box2d/collision/shapes/b2ShapeDef.js'></script>
+        <script src='../../js/box2d/collision/shapes/b2BoxDef.js'></script>
+        <script src='../../js/box2d/collision/shapes/b2CircleDef.js'></script>
+        <script src='../../js/box2d/collision/shapes/b2CircleShape.js'></script>
+        <script src='../../js/box2d/collision/shapes/b2MassData.js'></script>
+        <script src='../../js/box2d/collision/shapes/b2PolyDef.js'></script>
+        <script src='../../js/box2d/collision/shapes/b2PolyShape.js'></script>
+        <script src='../../js/box2d/dynamics/b2Body.js'></script>
+        <script src='../../js/box2d/dynamics/b2BodyDef.js'></script>
+        <script src='../../js/box2d/dynamics/b2CollisionFilter.js'></script>
+        <script src='../../js/box2d/dynamics/b2Island.js'></script>
+        <script src='../../js/box2d/dynamics/b2TimeStep.js'></script>
+        <script src='../../js/box2d/dynamics/contacts/b2ContactNode.js'></script>
+        <script src='../../js/box2d/dynamics/contacts/b2Contact.js'></script>
+        <script src='../../js/box2d/dynamics/contacts/b2ContactConstraint.js'></script>
+        <script src='../../js/box2d/dynamics/contacts/b2ContactConstraintPoint.js'></script>
+        <script src='../../js/box2d/dynamics/contacts/b2ContactRegister.js'></script>
+        <script src='../../js/box2d/dynamics/contacts/b2ContactSolver.js'></script>
+        <script src='../../js/box2d/dynamics/contacts/b2CircleContact.js'></script>
+        <script src='../../js/box2d/dynamics/contacts/b2Conservative.js'></script>
+        <script src='../../js/box2d/dynamics/contacts/b2NullContact.js'></script>
+        <script src='../../js/box2d/dynamics/contacts/b2PolyAndCircleContact.js'></script>
+        <script src='../../js/box2d/dynamics/contacts/b2PolyContact.js'></script>
+        <script src='../../js/box2d/dynamics/b2ContactManager.js'></script>
+        <script src='../../js/box2d/dynamics/b2World.js'></script>
+        <script src='../../js/box2d/dynamics/b2WorldListener.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2JointNode.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2Joint.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2JointDef.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2DistanceJoint.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2DistanceJointDef.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2Jacobian.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2GearJoint.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2GearJointDef.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2MouseJoint.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2MouseJointDef.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2PrismaticJoint.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2PrismaticJointDef.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2PulleyJoint.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2PulleyJointDef.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2RevoluteJoint.js'></script>
+        <script src='../../js/box2d/dynamics/joints/b2RevoluteJointDef.js'></script>
+        <script src='../../libs/draw_world.js'></script>
+        <script src="../../libs/lodash.js"></script>
+        <script src="../../libs/socket.io.js"></script>
+        <script src="../../dist/Tuio.js"></script>
+        <script src="../../dist/hammer.js"></script>
+        <script src="../../dist/Pattern.js"></script>
+        <script src="../../dist/Shape.js"></script>
+        <script src="../../dist/Circle.js"></script>
+        <script src="../../dist/Rectangle.js"></script>
+        <script src="../../dist/Manager.js"></script>
+        <script>
+            $.noConflict();
+            jQuery(document).ready(function($) {
+            	Hammer.plugins.fakeMultitouch();
+                var client = new Tuio.Client({
+                    host: "http://localhost:5000"
+                }),
+                screenW = $(window).width(),
+                screenH = $(window).height(),
+                manager = new Manager(),
+                canvasBackgroung = null, 
+                contextBackground = null,
+                canvasForeground = null,
+                contextForeground = null,
+                def = new Pattern(),
+                ground = new Rectangle(),
+                box1 = new Rectangle(),
+                box2 = new Rectangle(),
+                box3 = new Rectangle(),
+                box4 = new Rectangle(),
+                ball = new Circle(),
+                draged = false,
+                onGoingDrag = false,
+                posX = 0,
+              	posY = 0,
+
+                // Gesture recognition function
+            	gesture = function(event) {
+                    // At the end of the drag event, we create the ball and throw it in the right direction 
+            		if (event.type == "release") {
+            			if (!draged) {
+    	                	onGoingDrag = false;
+    	                	draged = true;
+
+    	                	if(posX > posY) {
+    	                		if (posX != 0) {
+    	                			posY = posY / posX;
+    	                			posX = 1;
+    	                		} else {
+    	                			posX = 1;
+    	                			posY = 0;
+    	                		}
+    	                	} else {
+    	                		if (posY != 0) {
+    	                			posX = posX / posY;
+    	                			posY = 1;
+    	                		} else {
+    	                			posX = 0;
+    	                			posY = 0;
+    	                		}
+    	                	}
+    	                	
+    	                	// Add the ball to the scene
+                            ball.setCanvasSize(canvasForeground.width,canvasForeground.height);
+                            ball.setContext(contextForeground);
+    		                ball.setXAbsolutePosition(200);
+    		                ball.setYAbsolutePosition(400);
+    		                ball.setRelativeRadius(0.02);
+    		                ball.setDensity(1);
+    		                ball.addPhysics(manager.getWorld(), 0.2);
+    		                ball.setLinearVelocity(1/(700 * posX) * 100000, 1/(700 * posY) * 100000);
+    		                manager.addCircle(ball);
+    	                }
+                    }
+                    // Collect the position of the finger during the drag
+        			if (event.type == "drag") {                                                                          
+                        if (!draged) {
+    	                    onGoingDrag = true;
+    	                    posX = event.gesture.touches[0].pageX - event.gesture.startEvent.center.pageX;
+    	                    posY = event.gesture.touches[0].pageY - event.gesture.startEvent.center.pageY;
+                    	}
+    				} 
+                },
+
+                // Init function
+            	onConnect = function() {
+            		// Canvas Init
+                    console.log("onConnect");
+                    canvasForeground = $("#tuioCanvas").get(0);
+                    canvasForeground.width=screenW;
+                    canvasForeground.height=screenH;
+                    time = new Date().getTime();
+                    contextForeground = canvasForeground.getContext("2d");
+                    canvasBackgroung = $("#fixe").get(0);
+                    canvasBackgroung.width = screenW;
+                    canvasBackgroung.height = screenH;
+                    contextBackground = canvasBackgroung.getContext("2d");
+
+                    // Pattern Init
+                    def.enableGesture(true);
+                    manager.addPattern(def);
+
+                    // Manager Init
+                    manager.setScreenSize(screenW, screenH);
+                    manager.setOnGesture(gesture);
+                    manager.setGravity(0,300);
+                    manager.initPhysics();
+
+                    // Add the ground to the scene
+                    ground.setCanvasSize(canvasBackgroung.width,canvasBackgroung.height);
+                    ground.setContext(contextBackground);
+                    ground.setXRelativePosition(0.5);
+                    ground.setYRelativePosition(0.95);
+                    ground.setRelativeWidth(1);
+                    ground.setRelativeHeight(0.1);
+                    ground.setDensity(0);
+                    ground.addPhysics(manager.getWorld(), 0.2);
+                    ground.setColor("#009fe3");
+                    manager.addRectangle(ground);
+
+                    //Add the boxes to the scene
+                    box1.setCanvasSize(canvasForeground.width,canvasForeground.height);
+                    box1.setContext(contextForeground);
+                    box1.setXRelativePosition(0.8);
+                    box1.setYRelativePosition(1 - 0.2);
+                    box1.setRelativeWidth(0.04);
+                    box1.setRelativeHeight(0.2);
+                    box1.setDensity(1);
+                    box1.addPhysics(manager.getWorld(), 0.2);
+                    box1.setColor("#ffffff");
+                    manager.addRectangle(box1);
+
+                    box2.setCanvasSize(canvasForeground.width,canvasForeground.height);
+                    box2.setContext(contextForeground);
+                    box2.setXRelativePosition(0.74);
+                    box2.setYRelativePosition(1 - 0.2);
+                    box2.setRelativeWidth(0.04);
+                    box2.setRelativeHeight(0.2);
+                    box2.setDensity(1);
+                    box2.addPhysics(manager.getWorld(), 0.2);
+                    box2.setColor("#ffffff");
+                    manager.addRectangle(box2);
+
+                    box3.setCanvasSize(canvasForeground.width,canvasForeground.height);
+                    box3.setContext(contextForeground);
+                    box3.setXRelativePosition(0.77);
+                    box3.setYRelativePosition(1 - 0.30 - canvasForeground.width / canvasForeground.height * 0.02);
+                    box3.setRelativeWidth(0.04);
+                    box3.setRelativeHeight(0.2);
+                    box3.setDensity(1);
+                    box3.setAngle(90);
+                    box3.addPhysics(manager.getWorld(), 0.2);
+                    box3.setColor("#ffffff");
+                    manager.addRectangle(box3);
+
+                    box4.setCanvasSize(canvasForeground.width,canvasForeground.height);
+                    box4.setContext(contextForeground);
+                    box4.setYRelativePosition(1 - 0.4 - canvasForeground.width / canvasForeground.height * 0.04);
+                    box4.setXRelativePosition(0.77);
+                    box4.setRelativeWidth(0.04);
+                    box4.setRelativeHeight(0.2);
+                    box4.setDensity(1);
+                    box4.addPhysics(manager.getWorld(), 0.2);
+                    box4.setColor("#ffffff");
+                    manager.addRectangle(box4);
+
+                    // FIll the screen with black
+                    contextBackground.fillStyle = "#000000";
+                    contextBackground.fillRect(0, 0, canvasBackgroung.width, canvasBackgroung.height);                    
+            	},
+
+            	draw = function() {
+                    contextForeground.clearRect(0, 0, canvasForeground.width, canvasForeground.height);
+
+                    //Draw the blobs
+                    var blobs = client.getTuioBlobs();
+                    for (var i in blobs) {
+                        blobs[i].setContext(contextForeground);
+                    }
+
+                    // Step physics and move objects
+                    manager.stepPhysics(1.0/30);
+
+                    // Draw the object
+                    manager.drawCircle();
+                    manager.drawRectangle();
+                    manager.drawBlobs(blobs);
+
+                    // Draw a line when draging to show the direction of the ball 
+                    if (onGoingDrag) {
+                    	contextForeground.save();
+                        contextForeground.strokeStyle = "#ffffff";
+                        contextForeground.beginPath();
+                        contextForeground.moveTo(200,400);
+    					contextForeground.lineTo(200 + 500 * (posX) , 400 + 500 * (posY));
+    					contextForeground.stroke();
+    					contextForeground.restore();
+                    }
+
+            	},
+
+                // Refresh the screen
+            	onRefresh = function(time) {
+                    draw();
+                },
+
+                // New blob event
+                onAddTuioBlob = function(blb) {
+                    manager.addEvent(blb);
+                },
+
+                // Removed blob event
+                onRemoveTuioBlob = function(blb) {
+                    manager.removeEvent(blb);
+                },
+
+                // Updated blob event
+                onUpdateTuioBlob = function(blb) {
+                    manager.updateEvent(blb);
+                };
+
+                client.on("connect", onConnect);
+                client.on("addTuioBlob", onAddTuioBlob);
+                client.on("updateTuioBlob", onUpdateTuioBlob);
+                client.on("removeTuioBlob", onRemoveTuioBlob);
+                client.on("refresh", onRefresh);
+                client.connect();
+            });
+        </script>
+    </body>
+</html>

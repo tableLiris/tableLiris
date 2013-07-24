@@ -1,0 +1,2296 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="shapebuttonGroup">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="GUI"/>
+    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+      <Color id="Curseur par d&#xe9;faut"/>
+    </Property>
+    <Property name="name" type="java.lang.String" value="GUI" noResource="true"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="generate" min="-2" pref="81" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="fileNameLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                              <Component id="fileName" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jTabbedPane1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="fileName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fileNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jTabbedPane1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="generate" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="generate">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Generate"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generateActionPerformed"/>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Global">
+                <Property name="tabTitle" type="java.lang.String" value="Global"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="gravityCheckBox" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="xGravityLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="xGravityTextField" min="-2" pref="45" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="yGravityLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="yGravityTextField" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="physicsCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="gestureLabel" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="pinchCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rotateCheckBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="tapCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dragCheckBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="physicsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="networkLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="networkCheckBox" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="serverIPLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="serverPortLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="serverIPTextField" min="-2" pref="137" max="-2" attributes="0"/>
+                                  <Component id="serverPortTextField" min="-2" pref="48" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="139" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="gestureLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="pinchCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dragCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tapCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="rotateCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="physicsLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="physicsCheckBox" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="gravityCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="xGravityTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="yGravityTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="xGravityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="yGravityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="networkLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="networkCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="serverIPLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="serverIPTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="serverPortLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="serverPortTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="55" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="gestureLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Gesture recognition :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="pinchCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value=" Pinch"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pinchCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="dragCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Drag"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dragCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="rotateCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Rotation"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="tapCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Tap"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="physicsLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Physics :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="physicsCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Turn on the physics"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="physicsCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="gravityCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Turn on the gravity"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="gravityCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="xGravityLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="x : "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="xGravityTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="xGravityTextFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="yGravityLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="y : "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="yGravityTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="networkLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Network :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="networkCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Turn on the network"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="networkCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="serverIPLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Server IP :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="serverPortLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Port :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="serverIPTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="127.0.0.1"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="serverPortTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="1337"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="serverPortTextFieldActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Canvas">
+                <Property name="tabTitle" type="java.lang.String" value="Canvas"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="canvasNameLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="CanvasNameTextField" min="-2" pref="85" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="canvasXPosLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="canvasXPosTextField" min="-2" pref="41" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                              <Component id="canvasYPosLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="canvasYPosTextField" min="-2" pref="41" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="canvasZPosLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="canvasZPosTextField" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
+                              <Component id="canvasHeightLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="canvasHeightTextField" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="canvasWidthLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="canvasWidthTextField" min="-2" pref="42" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="canvasColorLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="canvasColorTextField" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="213" max="32767" attributes="0"/>
+                      <Component id="jScrollPane3" min="-2" pref="76" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="addCanvasButton" max="32767" attributes="0"/>
+                          <Component id="deleteCanvasButton" min="-2" pref="107" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="CanvasNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="canvasNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="canvasXPosTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="canvasXPosLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="canvasYPosLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="canvasYPosTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="canvasZPosLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="canvasZPosTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="canvasWidthTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="canvasWidthLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="canvasHeightTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="canvasHeightLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="canvasColorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="canvasColorTextField" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="jScrollPane3" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="98" max="32767" attributes="0"/>
+                      <Component id="addCanvasButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="deleteCanvasButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="canvasNameLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Canvas name :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="CanvasNameTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="canvasXPosTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0.0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="canvasXPosTextFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="canvasXPosLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="x :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="canvasYPosLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="y :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="canvasYPosTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0.0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="canvasYPosTextFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="canvasZPosLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="z :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="canvasZPosTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="canvasWidthLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Width :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="canvasWidthTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="1.0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="canvasHeightLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Height :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="canvasHeightTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="1.0"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JList" name="canvasList">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="canvasListModel" type="code"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="valueChanged" listener="javax.swing.event.ListSelectionListener" parameters="javax.swing.event.ListSelectionEvent" handler="canvasListValueChanged"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="canvasColorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Color :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="canvasColorTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="#000000"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="canvasColorTextFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="addCanvasButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Add Canvas"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addCanvasButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="deleteCanvasButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Delete"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteCanvasButtonActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel3">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Patterns">
+                <Property name="tabTitle" type="java.lang.String" value="Patterns"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="patternXLimitedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternYLimitedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="PatternSizeLimitedCheckBox" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                                      <Component id="patternSizeLimitLabel" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="patternAngleLimitedCheckBox" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="patternAngleLimitLabel" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Component id="patternXMinLabel" min="-2" max="-2" attributes="0"/>
+                                              <Component id="patternYMinLabel" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="patternShowCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="patternYMinTextField" max="32767" attributes="0"/>
+                                          <Component id="patternXMinTextField" max="32767" attributes="0"/>
+                                          <Component id="patternSizeLimitTextField" max="32767" attributes="0"/>
+                                          <Component id="patternAngleLimitTextField" min="-2" pref="45" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                              <Component id="patternAngleDeltaLabel" min="-2" max="-2" attributes="0"/>
+                                              <Component id="patternSizeDeltaLabel" min="-2" max="-2" attributes="0"/>
+                                              <Component id="patternXMaxLabel" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="patternYMaxLabel" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="patternYMaxTextField" max="32767" attributes="0"/>
+                                          <Component id="patternSizeDeltaTextField" max="32767" attributes="0"/>
+                                          <Component id="patternAngleDeltaTextField" max="32767" attributes="0"/>
+                                          <Component id="patternXMaxTextField" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="patternGestureCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="patternNameLabel" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="patternNameTextField" min="-2" pref="51" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="155" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="79" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="patternPhysicsCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="patternContextLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="patternCanvasComboBox" min="-2" pref="64" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="patternColorLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="patternColorTextField" min="-2" pref="61" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="addPatternButton" max="32767" attributes="0"/>
+                                  <Component id="deletePatternButton" min="-2" pref="107" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="patternNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="patternGestureCheckBox" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="PatternSizeLimitedCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternSizeLimitTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternSizeLimitLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternSizeDeltaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternSizeDeltaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="patternAngleLimitedCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternAngleLimitTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternAngleLimitLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternAngleDeltaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternAngleDeltaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="patternXLimitedCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternXMinTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternXMaxTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternXMinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternXMaxLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="patternYLimitedCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternYMinTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternYMaxTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternYMinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="patternYMaxLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="patternShowCheckBox" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane1" min="-2" pref="143" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="patternPhysicsCheckBox" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="patternCanvasComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                      <Component id="patternContextLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="patternColorTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="patternColorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="addPatternButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="deletePatternButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="57" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JCheckBox" name="patternGestureCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Turn on the gesture recognition"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="PatternSizeLimitedCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Size limit"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PatternSizeLimitedCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="patternAngleLimitedCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Angle limit"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="patternAngleLimitedCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="patternXLimitedCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="X limit"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="patternXLimitedCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="patternYLimitedCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Y limit"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="patternYLimitedCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="patternShowCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Draw the blobs"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="patternPhysicsCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Turn on the physics for the blobs"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="patternPhysicsCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="patternSizeLimitLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Aera :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="patternSizeLimitTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="patternAngleLimitLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Angle :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="patternAngleLimitTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="patternXMinTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0.0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="patternXMinLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="XMin :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="patternYMinLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="YMin :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="patternYMinTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0.0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="patternYMaxLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="YMax :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="patternYMaxTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="1.0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="patternXMaxTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="1.0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="patternXMaxTextFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="patternXMaxLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="XMax :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="patternAngleDeltaLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Delta :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="patternAngleDeltaTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="patternSizeDeltaTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="patternSizeDeltaLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Delta :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="patternNameLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pattern name :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="patternNameTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="patternContextLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Canvas :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="patternCanvasComboBox">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="canvasComboListModel" type="code"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="patternColorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Color :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="patternColorTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="#FFFFFF"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JList" name="patternList">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="patternListModel" type="code"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="valueChanged" listener="javax.swing.event.ListSelectionListener" parameters="javax.swing.event.ListSelectionEvent" handler="patternListValueChanged"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="addPatternButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Add Pattern"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addPatternButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="deletePatternButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Delete"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deletePatternButtonActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel4">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Shapes">
+                <Property name="tabTitle" type="java.lang.String" value="Shapes"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="linearDampingCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="shapePhysicsCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="linearVelocityCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace pref="80" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="65" pref="65" max="-2" attributes="0"/>
+                                              <Component id="dampingLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                              <Component id="dampingTextField" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="densityLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="xVelocityLabel" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                                      <Component id="xVelocityTextField" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="yVelocityLabel" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="yVelocityTextField" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="densityTextField" min="-2" pref="32" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="restitutionLabel" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="restitutionTextField" min="-2" pref="25" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="shapeContextLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                      <Component id="shapeContextComboBox" min="-2" pref="64" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="radiusLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="xPosLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="radiusTextField" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="xPosTextField" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="colorLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="colorTextField" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="heightLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="heightTextField" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="CircleRadioButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="RectangleRadioButton" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="widthLabel" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="widthTextField" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="yPosLabel" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="yPosTextField" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="shapeNameLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="shapeNameTextField" min="-2" pref="84" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="jScrollPane2" min="-2" pref="101" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="deleteShapeButton" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="addShapeButton" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jScrollPane2" min="-2" pref="151" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="linearDampingCheckBox" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="shapeContextComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="shapeContextLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="34" max="32767" attributes="0"/>
+                              <Component id="addShapeButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="deleteShapeButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="CircleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RectangleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="shapeNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="shapeNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="radiusTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="widthTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="heightTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="heightLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="widthLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="radiusLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="xPosTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="yPosTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="xPosLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="yPosLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="colorTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="colorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="shapePhysicsCheckBox" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="linearVelocityCheckBox" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="densityTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="restitutionTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="densityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="restitutionLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="xVelocityTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="yVelocityTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="xVelocityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="yVelocityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="dampingTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dampingLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JRadioButton" name="RectangleRadioButton">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="shapebuttonGroup"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Rectangle"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RectangleRadioButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="shapeNameLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Name :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="CircleRadioButton">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="shapebuttonGroup"/>
+                </Property>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" value="Circle"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CircleRadioButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="shapeNameTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="radiusLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Radius :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="radiusTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0.0"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 27]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="widthLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Width"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="widthTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0.0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 27]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="heightLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Height :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="heightTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0.0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 27]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="colorTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="#FFFFFF"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="colorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Color :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="yPosTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0.0"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 27]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="yPosLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pos Y :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="xPosTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0.0"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 27]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="xPosLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pos X :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="shapePhysicsCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Turn on the physics"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="shapePhysicsCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="densityLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Density :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="densityTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="1.0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="restitutionLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Restitution :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="restitutionTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="1.0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[25, 27]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="yVelocityTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 27]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="xVelocityTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 27]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="xVelocityLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="x :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="dampingLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="coefficient :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="dampingTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0.0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 27]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="linearVelocityCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Linear velocity"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="linearVelocityCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="linearDampingCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Linear damping"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="linearDampingCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="yVelocityLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="y :"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JList" name="shapeList">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="listModel" type="code"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="valueChanged" listener="javax.swing.event.ListSelectionListener" parameters="javax.swing.event.ListSelectionEvent" handler="shapeListValueChanged"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="addShapeButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Add shape"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addShapeButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="deleteShapeButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Delete"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteShapeButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="shapeContextComboBox">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="canvasComboListModel" type="code"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="shapeContextLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Canvas :"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JTabbedPane" name="jTabbedPane2">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Network send">
+                <Property name="tabTitle" type="java.lang.String" value="Network send"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel6">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Blob">
+                    <Property name="tabTitle" type="java.lang.String" value="Blob"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="networkBlobCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="137" max="32767" attributes="0"/>
+                                  <Component id="netBlobRealTimeSendingCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="netBlobSendingFreqLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netBlobSendingFreqTextField" min="-2" pref="33" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="netBlobYSpeedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netBlobMotionAccelCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netBlobXSpeedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netBlobXRelPosCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netBlobYRelPosCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netBlobIdCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="netBlobRelHeightCheckBox" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netBlobRelWidthCheckBox" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netBlobAngleCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netBlobAngleSpeedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netBlobAngleAccelCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="networkBlobCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="netBlobSendingFreqTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="netBlobSendingFreqLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="netBlobRealTimeSendingCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="51" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="netBlobIdCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netBlobXRelPosCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netBlobYRelPosCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netBlobXSpeedCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netBlobYSpeedCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netBlobMotionAccelCheckBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="netBlobRelWidthCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netBlobRelHeightCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netBlobAngleCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netBlobAngleSpeedCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netBlobAngleAccelCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="56" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JCheckBox" name="networkBlobCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Turn on blobs sending"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="networkBlobCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netBlobXSpeedCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="X speed"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netBlobYSpeedCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Y speed"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netBlobMotionAccelCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Linear acceleration"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netBlobAngleCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Angle"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netBlobAngleSpeedCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Angular speed"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netBlobAngleAccelCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Angular acceleration"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="netBlobSendingFreqTextField">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="100"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="netBlobSendingFreqLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Sending frequency :"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netBlobRealTimeSendingCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Real time"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="netBlobRealTimeSendingCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netBlobRelWidthCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative width"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netBlobXRelPosCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative X"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netBlobYRelPosCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative Y"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netBlobRelHeightCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative height"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netBlobIdCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="ID"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel7">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Circle">
+                    <Property name="tabTitle" type="java.lang.String" value="Circle"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="networkCircleCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="6" pref="362" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="netCircleYRelPositionCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netCircleXSpeedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netCircleYSpeedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netCircleXRelPositionCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="netCircleColorCheckBox" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace pref="329" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="netCircleRelRadiusCheckBox" min="-2" max="-2" attributes="0"/>
+                                              <Component id="netCircleScaleCheckBox" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="0" pref="291" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="networkCircleCheckBox" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="netCircleRelRadiusCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netCircleScaleCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netCircleColorCheckBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="netCircleXRelPositionCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netCircleYRelPositionCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netCircleXSpeedCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netCircleYSpeedCheckBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="115" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JCheckBox" name="networkCircleCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Turn on Circles sending"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="networkCircleCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netCircleXRelPositionCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative X"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netCircleYRelPositionCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative Y"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netCircleXSpeedCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="X speed"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netCircleYSpeedCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Y speed"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netCircleRelRadiusCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relatif radius"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netCircleScaleCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Scale"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="netCircleScaleCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netCircleColorCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Color"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel8">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Rectangle">
+                    <Property name="tabTitle" type="java.lang.String" value="Rectangle"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="networkRectangleCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="netRectangleYSpeedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="netRectangleYRelPositionCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRectangleXRelPositionCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRectangleXSpeedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="netRectangleAngleCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="netRectangleRelHeightCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="netRectangleRelWidthCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="netRectangleColorCheckBox" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="netRectangleScaleCheckBox" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="116" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="networkRectangleCheckBox" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="netRectangleXRelPositionCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRectangleYRelPositionCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRectangleXSpeedCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRectangleYSpeedCheckBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="netRectangleRelWidthCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRectangleScaleCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="netRectangleRelHeightCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRectangleColorCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRectangleAngleCheckBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="138" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JCheckBox" name="networkRectangleCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Turn on Rectangles sending"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="networkRectangleCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRectangleXRelPositionCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative X"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRectangleYRelPositionCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative Y"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRectangleXSpeedCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="X speed"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="netRectangleXSpeedCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRectangleYSpeedCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Y speed"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRectangleRelWidthCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative width"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRectangleRelHeightCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative height"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRectangleAngleCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Angle"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRectangleScaleCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Scale"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRectangleColorCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Color"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JTabbedPane" name="jTabbedPane3">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Network receive">
+                <Property name="tabTitle" type="java.lang.String" value="Network receive"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel5">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Blob">
+                    <Property name="tabTitle" type="java.lang.String" value="Blob"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="netRecepBlobCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="netRecepBlobYSpeedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRecepBlobMotionAccelCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRecepBlobXSpeedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRecepBlobXRelPosCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRecepBlobYRelPosCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRecepBlobIdCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="netRecepBlobRelHeightCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRecepBlobRelWidthCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRecepBlobAngleCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRecepBlobAngleSpeedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRecepBlobAngleAccelCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="214" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="netRecepBlobRelWidthCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepBlobRelHeightCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepBlobAngleCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepBlobAngleSpeedCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepBlobAngleAccelCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="netRecepBlobCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="54" max="32767" attributes="0"/>
+                                  <Component id="netRecepBlobIdCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepBlobXRelPosCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepBlobYRelPosCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepBlobXSpeedCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepBlobYSpeedCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepBlobMotionAccelCheckBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JCheckBox" name="netRecepBlobCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Turn on Blobs reception"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="netRecepBlobCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepBlobIdCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="ID"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepBlobXRelPosCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative X"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepBlobYRelPosCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative Y"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepBlobXSpeedCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="X speed"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepBlobYSpeedCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Y speed"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepBlobMotionAccelCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Linear acceleration"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepBlobAngleAccelCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Angular acceleration"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepBlobAngleSpeedCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Angular speed"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepBlobAngleCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Angle"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepBlobRelHeightCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative height"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepBlobRelWidthCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative width"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="netRecepBlobRelWidthCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel9">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Circle">
+                    <Property name="tabTitle" type="java.lang.String" value="Circle"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="netRecepCircleYRelPositionCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                          <Component id="netRecepCircleXSpeedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="netRecepCircleYSpeedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="netRecepCircleXRelPositionCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="netRecepCircleRelRadiusCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRecepCircleColorCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRecepCircleScaleCheckBox" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="netRecepCircleCheckBox" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="290" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="netRecepCircleCheckBox" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="netRecepCircleXRelPositionCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepCircleYRelPositionCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepCircleXSpeedCheckBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="netRecepCircleRelRadiusCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepCircleScaleCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepCircleColorCheckBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="netRecepCircleYSpeedCheckBox" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="138" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JCheckBox" name="netRecepCircleCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Turn on Circles reception"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="netRecepCircleCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepCircleXRelPositionCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative X"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepCircleYRelPositionCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative Y"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepCircleXSpeedCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="X speed"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepCircleYSpeedCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Y speed"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepCircleRelRadiusCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relatif radius"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepCircleScaleCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Scale"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="netRecepCircleScaleCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepCircleColorCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Color"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel10">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Rectangle">
+                    <Property name="tabTitle" type="java.lang.String" value="Rectangle"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="netRecepRectangleCheckBox" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="netRecepRectangleYRelPositionCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                          <Component id="netRecepRectangleXSpeedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="netRecepRectangleYSpeedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="netRecepRectangleXRelPositionCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace pref="89" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="netRecepRectangleRelWidthCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRecepRectangleRelHeightCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="netRecepRectangleAngleCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="netRecepRectangleScaleCheckBox" min="-2" max="-2" attributes="0"/>
+                              <Component id="netRecepRectangleColorCheckBox" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="102" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="netRecepRectangleCheckBox" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="netRecepRectangleScaleCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepRectangleColorCheckBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="netRecepRectangleXRelPositionCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepRectangleYRelPositionCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepRectangleXSpeedCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepRectangleYSpeedCheckBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="netRecepRectangleRelWidthCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepRectangleRelHeightCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="netRecepRectangleAngleCheckBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="138" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JCheckBox" name="netRecepRectangleCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Turn on Rectangle reception"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="netRecepRectangleCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepRectangleXRelPositionCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative X"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepRectangleYRelPositionCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative Y"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepRectangleXSpeedCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="X speed"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepRectangleYSpeedCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Y speed"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepRectangleAngleCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Angle"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepRectangleRelHeightCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative height"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepRectangleRelWidthCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relative Width"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepRectangleScaleCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Scale"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="netRecepRectangleColorCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Color"/>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JTextField" name="fileName">
+    </Component>
+    <Component class="javax.swing.JLabel" name="fileNameLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Name :"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>

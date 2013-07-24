@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>light.html</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<div style="position: relative;">
+			<canvas id="background" width="0" height="0" style="position: absolute; left: 0; top : 0; z-index: 0;"></canvas>
+			<canvas id="foreground" width="0" height="0" style="position: absolute; left: 0; top : 0; z-index: 1;"></canvas>
+		</div>
+		<script src="libs/prototype-1.6.0.2.js"></script>
+		<script src="libs/jquery-1.7.2.js"></script>
+		<script src="libs/requestanimationframe.js"></script>
+		<script src='js/box2d/common/b2Settings.js'></script>
+		<script src='js/box2d/common/math/b2Vec2.js'></script>
+		<script src='js/box2d/common/math/b2Mat22.js'></script>
+		<script src='js/box2d/common/math/b2Math.js'></script>
+		<script src='js/box2d/collision/b2AABB.js'></script>
+		<script src='js/box2d/collision/b2Bound.js'></script>
+		<script src='js/box2d/collision/b2BoundValues.js'></script>
+		<script src='js/box2d/collision/b2Pair.js'></script>
+		<script src='js/box2d/collision/b2PairCallback.js'></script>
+		<script src='js/box2d/collision/b2BufferedPair.js'></script>
+		<script src='js/box2d/collision/b2PairManager.js'></script>
+		<script src='js/box2d/collision/b2BroadPhase.js'></script>
+		<script src='js/box2d/collision/b2Collision.js'></script>
+		<script src='js/box2d/collision/Features.js'></script>
+		<script src='js/box2d/collision/b2ContactID.js'></script>
+		<script src='js/box2d/collision/b2ContactPoint.js'></script>
+		<script src='js/box2d/collision/b2Distance.js'></script>
+		<script src='js/box2d/collision/b2Manifold.js'></script>
+		<script src='js/box2d/collision/b2OBB.js'></script>
+		<script src='js/box2d/collision/b2Proxy.js'></script>
+		<script src='js/box2d/collision/ClipVertex.js'></script>
+		<script src='js/box2d/collision/shapes/b2Shape.js'></script>
+		<script src='js/box2d/collision/shapes/b2ShapeDef.js'></script>
+		<script src='js/box2d/collision/shapes/b2BoxDef.js'></script>
+		<script src='js/box2d/collision/shapes/b2CircleDef.js'></script>
+		<script src='js/box2d/collision/shapes/b2CircleShape.js'></script>
+		<script src='js/box2d/collision/shapes/b2MassData.js'></script>
+		<script src='js/box2d/collision/shapes/b2PolyDef.js'></script>
+		<script src='js/box2d/collision/shapes/b2PolyShape.js'></script>
+		<script src='js/box2d/dynamics/b2Body.js'></script>
+		<script src='js/box2d/dynamics/b2BodyDef.js'></script>
+		<script src='js/box2d/dynamics/b2CollisionFilter.js'></script>
+		<script src='js/box2d/dynamics/b2Island.js'></script>
+		<script src='js/box2d/dynamics/b2TimeStep.js'></script>
+		<script src='js/box2d/dynamics/contacts/b2ContactNode.js'></script>
+		<script src='js/box2d/dynamics/contacts/b2Contact.js'></script>
+		<script src='js/box2d/dynamics/contacts/b2ContactConstraint.js'></script>
+		<script src='js/box2d/dynamics/contacts/b2ContactConstraintPoint.js'></script>
+		<script src='js/box2d/dynamics/contacts/b2ContactRegister.js'></script>
+		<script src='js/box2d/dynamics/contacts/b2ContactSolver.js'></script>
+		<script src='js/box2d/dynamics/contacts/b2CircleContact.js'></script>
+		<script src='js/box2d/dynamics/contacts/b2Conservative.js'></script>
+		<script src='js/box2d/dynamics/contacts/b2NullContact.js'></script>
+		<script src='js/box2d/dynamics/contacts/b2PolyAndCircleContact.js'></script>
+		<script src='js/box2d/dynamics/contacts/b2PolyContact.js'></script>
+		<script src='js/box2d/dynamics/b2ContactManager.js'></script>
+		<script src='js/box2d/dynamics/b2World.js'></script>
+		<script src='js/box2d/dynamics/b2WorldListener.js'></script>
+		<script src='js/box2d/dynamics/joints/b2JointNode.js'></script>
+		<script src='js/box2d/dynamics/joints/b2Joint.js'></script>
+		<script src='js/box2d/dynamics/joints/b2JointDef.js'></script>
+		<script src='js/box2d/dynamics/joints/b2DistanceJoint.js'></script>
+		<script src='js/box2d/dynamics/joints/b2DistanceJointDef.js'></script>
+		<script src='js/box2d/dynamics/joints/b2Jacobian.js'></script>
+		<script src='js/box2d/dynamics/joints/b2GearJoint.js'></script>
+		<script src='js/box2d/dynamics/joints/b2GearJointDef.js'></script>
+		<script src='js/box2d/dynamics/joints/b2MouseJoint.js'></script>
+		<script src='js/box2d/dynamics/joints/b2MouseJointDef.js'></script>
+		<script src='js/box2d/dynamics/joints/b2PrismaticJoint.js'></script>
+		<script src='js/box2d/dynamics/joints/b2PrismaticJointDef.js'></script>
+		<script src='js/box2d/dynamics/joints/b2PulleyJoint.js'></script>
+		<script src='js/box2d/dynamics/joints/b2PulleyJointDef.js'></script>
+		<script src='js/box2d/dynamics/joints/b2RevoluteJoint.js'></script>
+		<script src='js/box2d/dynamics/joints/b2RevoluteJointDef.js'></script>
+		<script src='draw_world.js'></script>
+		<script src="libs/lodash.js"></script>
+		<script src="libs/socket.io.js"></script>
+		<script src="dist/Tuio.js"></script>
+		<script src="dist/hammer.js"></script>
+		<script src="dist/Pattern.js"></script>
+		<script src="dist/Shape.js"></script>
+		<script src="dist/Circle.js"></script>
+		<script src="dist/Rectangle.js"></script>
+		<script src="dist/Manager.js"></script>
+		<script src="ray.js"></script>
+		<script>
+		$.noConflict();
+		jQuery(document).ready(function($) {
+			Hammer.plugins.fakeMultitouch();
+			screenW = $(window).width(),
+			screenH = $(window).height(),
+			manager = new Manager(),
+			canvasbackground = null, 
+			contextbackground = null,
+			canvasforeground = null, 
+			contextforeground = null,
+			source = new Circle(),
+			mirror = new Pattern(),
+			rayon = new Ray(),
+			rays = [],
+			cpt = 0,
+			socket = io.connect("192.168.1.104:1337");
+            console.log("connected");
+            socket.on("news", function(data) {
+                pos = data.hello;
+                console.log(data.hello);
+                socket.emit("my other event", {my: "data"});
+            });
+
+            var screenW = $(window).width();
+			var screenH = $(window).height();
+
+            // Gesture Recognition Function
+			gesture = function(event) {
+				if (event.type == "release") {
+					// End of pinch event, rotate event and drag event
+				}
+			};
+
+			// Recursively reflect the rays on the blobs
+			reflect = function(ray,blobs) {  
+				var blob = null;
+				var cpRay = ray;
+				cpt ++; 
+				if (cpt > 5) { // Allow only 5 reflections of a ray, avoid infinit loop
+					return;
+				}
+
+				//redraw the ray with a full screen length
+				ray.removePhysics(manager.getWorld());
+                manager.removeRectangle(ray);
+
+				delete ray;
+				rayon = new Ray();
+				rayon.setCanvasSize(canvasforeground.width, canvasforeground.height);
+				rayon.setContext(contextforeground);
+				rayon.setRelativeHeight(0.05);
+				rayon.setRelativeWidth(1.5);
+				rayon.setXDir(cpRay.getXDir());
+				rayon.setYDir(cpRay.getYDir());
+				rayon.setColor("#FFFF00");
+				rayon.setXSource(cpRay.getXSource());
+				rayon.setYSource(cpRay.getYSource());
+				rayon.setSourceId(cpRay.getSourceId());
+
+				var angle = cpRay.getAngle() / 180 * Math.PI;
+
+				if (rayon.getXDir() >= 0) {
+					rayon.setXAbsolutePosition(rayon.getXSource() + Math.cos(Math.abs(angle)) * rayon.getAbsoluteWidth() / 2);
+				} else {
+					rayon.setXAbsolutePosition(rayon.getXSource() - Math.cos(Math.abs(angle)) * rayon.getAbsoluteWidth() / 2);
+				}
+
+				if (rayon.getYDir()>= 0) {
+					rayon.setYAbsolutePosition(rayon.getYSource() + Math.sin(Math.abs(angle)) * rayon.getAbsoluteWidth() / 2);
+				} else {
+					rayon.setYAbsolutePosition(rayon.getYSource() - Math.sin(Math.abs(angle)) * rayon.getAbsoluteWidth() / 2);
+				}
+				
+				if (rayon.getYDir() > 0) {
+					if (rayon.getXDir() > 0) {
+						rayon.setAngle(-angle * 180 / Math.PI);
+					} else {
+						rayon.setAngle(angle * 180 / Math.PI);
+					}
+				} else {
+					if (rayon.getXDir() > 0) {
+						rayon.setAngle(angle * 180 / Math.PI);
+					} else {
+						rayon.setAngle(-angle * 180 / Math.PI);
+					}
+				}
+
+                rayon.setCollisionFilter(0x0002);
+                rayon.setCollisionMask(0x0004);
+                rayon.addPhysics(manager.getWorld(),1.0);
+                rayon.setAngle(-rayon.getAngle());
+				manager.addRectangle(rayon);
+			};
+
+			// Draw the objects
+			setInterval(draw = function() {
+				contextforeground.clearRect(0, 0, canvasforeground.width, canvasforeground.height);
+
+				var blobs = [];
+				var supprBody = manager.getWorld().GetBodyList();
+				
+				while(supprBody != null) {
+					var nextBody = supprBody.GetNext();
+					manager.getWorld().DestroyBody(supprBody);
+					supprBody = nextBody;
+				}
+
+				manager.drawRectangle();
+				manager.drawBlobs(blobs);
+				manager.drawCircle();
+
+				manager.removeAllRectangle();
+
+				//Redraw the ray of the source
+                rayon.removePhysics(manager.getWorld());
+                delete rayon;
+                rayon = new Ray();
+				rayon.setCanvasSize(canvasforeground.width, canvasforeground.height);
+				rayon.setContext(contextforeground);
+				rayon.setRelativeHeight(0.05);
+				rayon.setAbsoluteWidth(1000);
+				rayon.setXAbsolutePosition(rayon.getAbsoluteWidth() / 2 + source.getXAbsolutePosition());
+				rayon.setYRelativePosition(0.5);
+				rayon.setColor("#FFFF00");
+				rayon.setXSource(source.getXAbsolutePosition());
+				rayon.setYSource(source.getYAbsolutePosition());
+				rayon.setXDir(1);
+				rayon.setAngle(0);
+				rayon.setYDir(0);
+                rayon.setDensity(1.0);
+                rayon.setCollisionFilter(0x0002);
+                rayon.setCollisionMask(0x0004);
+                rayon.addPhysics(manager.getWorld(),0.0);
+				manager.addRectangle(rayon);
+				
+				for (var i = 0; i < rays.length; i++) {
+					rays[i].removePhysics(manager.getWorld());
+					delete rays[i];
+				}
+
+                rays = [];
+				cpt = 0;
+
+				manager.stepPhysics(1.0 / 60.0);
+
+				reflect(rayon,blobs);	
+				drawWorld(manager.getWorld(),contextforeground);
+				
+				console.log(manager.getWorld().m_bodyCount);
+
+				//If a ray touches the edge of the screen, send the ray to the oser user
+				for (var i = 0; i < rays.length; i++) {
+					if (rays[i].getXDir() > 0 && rays[i].getXAbsolutePosition() + Math.cos(rays[i].getAngle()) * rays[i].getAbsoluteWidth() / 2 > screenW) {
+						var msg = {yPos: rays[i].getYRelativePosition(), angle: rays[i].getAngle(), yDir:rays[i].getYDir()};
+                    	socket.emit('ray',msg);
+					}
+				}
+
+				if (rayon.getXDir() > 0 && rayon.getXAbsolutePosition() + Math.cos(rayon.getAngle()) * rayon.getAbsoluteWidth() / 2 > screenW) {
+					var msg = {yPos: rayon.getYRelativePosition(), angle: rayon.getAngle(), yDir:rayon.getYDir()};
+                    socket.emit('ray',msg);
+				}
+				
+			},100);
+
+			// Canvas Init
+			canvasbackground = $("#background").get(0);
+			canvasbackground.width=screenW * 1.0;
+			canvasbackground.height=screenH * 1.0;
+			canvasbackground.style.left = screenW * 0.0 + "px";
+			canvasbackground.style.top = screenH * 0.0 + "px";
+			contextbackground = canvasbackground.getContext("2d");
+			canvasforeground = $("#foreground").get(0);
+			canvasforeground.width=screenW * 1.0;
+			canvasforeground.height=screenH * 1.0;
+			canvasforeground.style.left = screenW * 0.0 + "px";
+			canvasforeground.style.top = screenH * 0.0 + "px";
+			contextforeground = canvasforeground.getContext("2d");
+			time = new Date().getTime();
+
+			// Pattern Init			
+			mirror.addSizeLimit(800, 200);
+			manager.addPattern(mirror);
+
+			// Manager Init
+			manager.setScreenSize(screenW, screenH);
+			manager.setOnGesture(gesture);
+			manager.initPhysics();
+
+			// Add the source to the scene
+			source.setCanvasSize(canvasforeground.width, canvasforeground.height);
+			source.setContext(contextforeground);
+			source.setRelativeRadius(0.04);
+			source.setXRelativePosition(0.2);
+			source.setYRelativePosition(0.5);
+			source.setColor("#FFFFFF");
+            source.addPhysics(manager.getWorld(),0.0);
+			manager.addCircle(source);
+
+			// Fill the screen with black
+			contextbackground.fillStyle = "#000000";
+			contextbackground.fillRect(0, 0, canvasbackground.width, canvasbackground.height);
+			draw();
+
+			// Add a ray when receiving a "ray" message
+			socket.on('ray', function(data) {
+
+				var supprBody = manager.getWorld().GetBodyList();
+
+				while(supprBody != null) {
+					var nextBody = supprBody.GetNext();
+					manager.getWorld().DestroyBody(supprBody);
+					supprBody = nextBody;
+				}
+
+				for (var i = 0; i < rays.length; i++) {
+					manager.removeRectangle(rays[i]);
+				}
+				rays = [];
+                var obj = JSON.parse(data);
+                var rayon = new Ray();
+                rayon.setCanvasSize(canvasforeground.width, canvasforeground.height);
+                rayon.setContext(contextforeground);
+                rayon.setRelativeHeight(0.05);
+                rayon.setColor("#FFFF00");
+                rayon.setXDir(-1);
+                if (obj[0].angle > 0) {
+                	rayon.setYDir(1);
+                } else if (obj[0].angle < 0) {
+                	rayon.setYDir(-1);
+                } else {
+                	rayon.setYDir(obj[0].yDir);
+                }
+                rayon.setYDir(obj[0].yDir);
+                rayon.setXSource(screenW);
+				rayon.setYSource(obj[0].yPos * canvasforeground.height);
+				rayon.setRelativeWidth(1.5);
+				rayon.setSourceId(0);
+
+				if( obj[0].yDir > 0) {
+					var angle = obj[0].angle / 180 * Math.PI;
+				} else {
+					var angle = -obj[0].angle / 180 * Math.PI;
+				}
+				
+				if (rayon.getXDir() >= 0) {
+					rayon.setXAbsolutePosition(rayon.getXSource() + Math.cos(Math.abs(angle)) * rayon.getAbsoluteWidth() / 2);
+				} else {
+					rayon.setXAbsolutePosition(rayon.getXSource() - Math.cos(Math.abs(angle)) * rayon.getAbsoluteWidth() / 2);
+				}
+
+				if (rayon.getYDir()>= 0) {
+					rayon.setYAbsolutePosition(rayon.getYSource() + Math.sin(Math.abs(angle)) * rayon.getAbsoluteWidth() / 2);
+				} else {
+					rayon.setYAbsolutePosition(rayon.getYSource() - Math.sin(Math.abs(angle)) * rayon.getAbsoluteWidth() / 2);
+				}
+
+				if (rayon.getYDir() > 0) {
+					if (rayon.getXDir() > 0) {
+						rayon.setAngle(angle * 180 / Math.PI);
+					} else {
+						rayon.setAngle(-angle * 180 / Math.PI);
+					}
+				} else {
+					if (rayon.getXDir() > 0) {
+						rayon.setAngle(-angle * 180 / Math.PI);
+					} else {
+						rayon.setAngle(angle * 180 / Math.PI);
+					}
+				}
+
+				rayon.setCollisionFilter(0x0002);
+                rayon.setCollisionMask(0x0004);
+                rayon.addPhysics(manager.getWorld(),0.0);
+
+				manager.addRectangle(rayon);
+
+				manager.stepPhysics(1.0 / 60.0);
+				blobs = [];
+				cpt = 0;
+				
+				reflect(rayon, blobs);
+				
+				drawWorld(manager.getWorld(),contextforeground);
+            });
+
+		});
+		</script>
+	</body>
+</html>

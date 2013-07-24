@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Pong.js</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div style="position: relative;">
+            <canvas id="tuioCanvas" width="1680" height="645" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+            <canvas id="fixe" width="1680" height="645" style="position: absolute; left : 0; top: 0; z-index: 0;"></canvas>
+        </div>
+        <script src="libs/prototype-1.6.0.2.js"></script>
+        <script src="libs/jquery-1.7.2.js"></script>
+        
+        <script src="libs/requestanimationframe.js"></script>
+        <script src='js/box2d/common/b2Settings.js'></script>
+        <script src='js/box2d/common/math/b2Vec2.js'></script>
+        <script src='js/box2d/common/math/b2Mat22.js'></script>
+        <script src='js/box2d/common/math/b2Math.js'></script>
+        <script src='js/box2d/collision/b2AABB.js'></script>
+        <script src='js/box2d/collision/b2Bound.js'></script>
+        <script src='js/box2d/collision/b2BoundValues.js'></script>
+        <script src='js/box2d/collision/b2Pair.js'></script>
+        <script src='js/box2d/collision/b2PairCallback.js'></script>
+        <script src='js/box2d/collision/b2BufferedPair.js'></script>
+        <script src='js/box2d/collision/b2PairManager.js'></script>
+        <script src='js/box2d/collision/b2BroadPhase.js'></script>
+        <script src='js/box2d/collision/b2Collision.js'></script>
+        <script src='js/box2d/collision/Features.js'></script>
+        <script src='js/box2d/collision/b2ContactID.js'></script>
+        <script src='js/box2d/collision/b2ContactPoint.js'></script>
+        <script src='js/box2d/collision/b2Distance.js'></script>
+        <script src='js/box2d/collision/b2Manifold.js'></script>
+        <script src='js/box2d/collision/b2OBB.js'></script>
+        <script src='js/box2d/collision/b2Proxy.js'></script>
+        <script src='js/box2d/collision/ClipVertex.js'></script>
+        <script src='js/box2d/collision/shapes/b2Shape.js'></script>
+        <script src='js/box2d/collision/shapes/b2ShapeDef.js'></script>
+        <script src='js/box2d/collision/shapes/b2BoxDef.js'></script>
+        <script src='js/box2d/collision/shapes/b2CircleDef.js'></script>
+        <script src='js/box2d/collision/shapes/b2CircleShape.js'></script>
+        <script src='js/box2d/collision/shapes/b2MassData.js'></script>
+        <script src='js/box2d/collision/shapes/b2PolyDef.js'></script>
+        <script src='js/box2d/collision/shapes/b2PolyShape.js'></script>
+        <script src='js/box2d/dynamics/b2Body.js'></script>
+        <script src='js/box2d/dynamics/b2BodyDef.js'></script>
+        <script src='js/box2d/dynamics/b2CollisionFilter.js'></script>
+        <script src='js/box2d/dynamics/b2Island.js'></script>
+        <script src='js/box2d/dynamics/b2TimeStep.js'></script>
+        <script src='js/box2d/dynamics/contacts/b2ContactNode.js'></script>
+        <script src='js/box2d/dynamics/contacts/b2Contact.js'></script>
+        <script src='js/box2d/dynamics/contacts/b2ContactConstraint.js'></script>
+        <script src='js/box2d/dynamics/contacts/b2ContactConstraintPoint.js'></script>
+        <script src='js/box2d/dynamics/contacts/b2ContactRegister.js'></script>
+        <script src='js/box2d/dynamics/contacts/b2ContactSolver.js'></script>
+        <script src='js/box2d/dynamics/contacts/b2CircleContact.js'></script>
+        <script src='js/box2d/dynamics/contacts/b2Conservative.js'></script>
+        <script src='js/box2d/dynamics/contacts/b2NullContact.js'></script>
+        <script src='js/box2d/dynamics/contacts/b2PolyAndCircleContact.js'></script>
+        <script src='js/box2d/dynamics/contacts/b2PolyContact.js'></script>
+        <script src='js/box2d/dynamics/b2ContactManager.js'></script>
+        <script src='js/box2d/dynamics/b2World.js'></script>
+        <script src='js/box2d/dynamics/b2WorldListener.js'></script>
+        <script src='js/box2d/dynamics/joints/b2JointNode.js'></script>
+        <script src='js/box2d/dynamics/joints/b2Joint.js'></script>
+        <script src='js/box2d/dynamics/joints/b2JointDef.js'></script>
+        <script src='js/box2d/dynamics/joints/b2DistanceJoint.js'></script>
+        <script src='js/box2d/dynamics/joints/b2DistanceJointDef.js'></script>
+        <script src='js/box2d/dynamics/joints/b2Jacobian.js'></script>
+        <script src='js/box2d/dynamics/joints/b2GearJoint.js'></script>
+        <script src='js/box2d/dynamics/joints/b2GearJointDef.js'></script>
+        <script src='js/box2d/dynamics/joints/b2MouseJoint.js'></script>
+        <script src='js/box2d/dynamics/joints/b2MouseJointDef.js'></script>
+        <script src='js/box2d/dynamics/joints/b2PrismaticJoint.js'></script>
+        <script src='js/box2d/dynamics/joints/b2PrismaticJointDef.js'></script>
+        <script src='js/box2d/dynamics/joints/b2PulleyJoint.js'></script>
+        <script src='js/box2d/dynamics/joints/b2PulleyJointDef.js'></script>
+        <script src='js/box2d/dynamics/joints/b2RevoluteJoint.js'></script>
+        <script src='js/box2d/dynamics/joints/b2RevoluteJointDef.js'></script>
+
+        <script src='draw_world.js'></script>
+
+        <script src="libs/lodash.js"></script>
+        <script src="libs/socket.io.js"></script>
+        <script src="dist/Tuio.js"></script>
+        <script src="dist/hammer.js"></script>
+        <script src="dist/Pattern.js"></script>
+        <script src="dist/Shape.js"></script>
+        <script src="dist/Circle.js"></script>
+        <script src="dist/Rectangle.js"></script>
+        <script src="dist/Manager.js"></script>
+
+        <script>
+            $.noConflict();
+            jQuery(document).ready(function($) {
+                Hammer.plugins.fakeMultitouch();
+                screenW = $(window).width(),
+                screenH = $(window).height(),
+                manager = new Manager(),
+                canvasForeground = null, 
+                canvasBackground = null,
+                contextForeground = null,
+                contextBackground = null,
+                def = new Pattern(),
+                circle = new Circle(),
+                ground = new Rectangle(),
+                ceiling = new Rectangle(),
+                wallL = new Rectangle(),
+                wallR = new Rectangle(),
+                square = new Pattern(),
+                lastBlobs = null;
+
+                gesture = function(event) {
+
+                };
+
+                // Canvas Init
+                var screenW = $(window).width();
+                var screenH = $(window).height();
+            	console.log("onConnect");
+            	canvasForeground = $("#tuioCanvas").get(0);
+            	canvasForeground.width=screenW;
+            	canvasForeground.height=screenH;
+            	canvasBackground = $("#fixe").get(0);
+            	canvasBackground.width=screenW;
+            	canvasBackground.height=screenH;
+            	time = new Date().getTime();
+            	contextForeground = canvasForeground.getContext("2d");
+            	contextBackground = canvasBackground.getContext("2d");
+
+            	// Pattern Init
+            	square.addSizeLimit(800,200);   
+            	manager.addPattern(square);
+            	manager.addPattern(def);
+
+            	// Manager Init
+            	manager.setScreenSize(screenW, screenH);
+            	manager.setOnGesture(gesture);
+            	manager.initPhysics();
+
+            	// Add the ball
+            	circle.setCanvasSize(canvasForeground.width,canvasForeground.height);
+            	circle.setContext(contextForeground);
+            	circle.setXRelativePosition(0.7);
+            	circle.setYRelativePosition(0.3);
+            	circle.setRelativeRadius(0.02);
+            	circle.setDensity(1);
+            	circle.addPhysics(manager.getWorld(), 1);
+            	circle.setColor("#00FF00");
+            	circle.setLinearVelocity(300,300);
+            	manager.addCircle(circle);
+
+            	// Add the ground
+            	ground.setCanvasSize(canvasBackground.width,canvasBackground.height);
+            	ground.setContext(contextBackground);
+            	ground.setXRelativePosition(0.5);
+            	ground.setYRelativePosition(0.975);
+            	ground.setRelativeWidth(1);
+            	ground.setRelativeHeight(0.10);
+            	ground.setDensity(0);
+            	ground.addPhysics(manager.getWorld(), 1);
+            	ground.setColor("#009fe3");
+            	manager.addRectangle(ground);
+
+            	// Add the ceiling
+            	ceiling.setCanvasSize(canvasBackground.width,canvasBackground.height);
+            	ceiling.setContext(contextBackground);
+            	ceiling.setXRelativePosition(0.5);
+            	ceiling.setYRelativePosition(0.025);
+            	ceiling.setRelativeWidth(1);
+            	ceiling.setRelativeHeight(0.1);
+            	ceiling.setDensity(0);
+            	ceiling.addPhysics(manager.getWorld(), 1);
+            	ceiling.setColor("#009fe3");
+            	manager.addRectangle(ceiling);
+
+            	// Add the right wall
+            	wallR.setCanvasSize(canvasBackground.width,canvasBackground.height);
+            	wallR.setContext(contextBackground);
+            	wallR.setXRelativePosition(0.975);
+            	wallR.setYRelativePosition(0.5);
+            	wallR.setRelativeWidth(0.1);
+            	wallR.setRelativeHeight(1);
+            	wallR.setDensity(0);
+            	wallR.addPhysics(manager.getWorld(), 1);
+            	wallR.setColor("#009fe3");
+            	manager.addRectangle(wallR);
+
+            	// Add the left wall
+            	wallL.setCanvasSize(canvasBackground.width,canvasBackground.height);
+            	wallL.setContext(contextBackground);
+            	wallL.setXRelativePosition(0.025);
+            	wallL.setYRelativePosition(0.5);
+            	wallL.setRelativeWidth(0.1);
+            	wallL.setRelativeHeight(1);
+            	wallL.setDensity(0);
+            	wallL.addPhysics(manager.getWorld(), 1);
+            	wallL.setColor("#009fe3");
+            	manager.addRectangle(wallL);
+
+                // Fill the screen with black
+            	contextBackground.fillStyle = "#000000";
+            	contextBackground.fillRect(0, 0, canvasBackground.width, canvasBackground.height);
+
+                // Draw the objects 
+                setInterval(draw = function() {
+                    contextForeground.clearRect(0, 0, canvasForeground.width, canvasForeground.height);
+
+                    //Step the physics and move the objects
+                    manager.stepPhysics(1.0/60);
+                    
+                    //Draw the objects
+                    drawWorld(manager.getWorld(), contextForeground);
+                    manager.drawCircle();
+                    manager.drawRectangle();
+                },30);
+
+        	   draw();
+
+           });
+        </script>
+    </body>
+</html>

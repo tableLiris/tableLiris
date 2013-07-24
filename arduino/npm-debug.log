@@ -1,0 +1,863 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'serialport2' ]
+2 info using npm@1.2.18
+3 info using node@v0.10.4
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose read json C:\Users\ebouvetdit\Documents\Projet\package.json
+6 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\express\package.json
+7 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\socket.io\package.json
+8 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\tuio\package.json
+9 verbose from cache C:\Users\ebouvetdit\Documents\Projet\package.json
+10 info shrinkwrap file "C:\\Users\\ebouvetdit\\Documents\\Projet\\npm-shrinkwrap.json"
+11 verbose readDependencies returned deps { express: '2.5.9',
+11 verbose readDependencies returned deps   grunt: '0.3.9',
+11 verbose readDependencies returned deps   jspack: '0.0.1',
+11 verbose readDependencies returned deps   'socket.io': '0.9.6',
+11 verbose readDependencies returned deps   tuio: '1.0.0' }
+12 verbose cache add [ 'serialport2', null ]
+13 verbose cache add name=undefined spec="serialport2" args=["serialport2",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'serialport2',
+14 verbose parsed url   path: 'serialport2',
+14 verbose parsed url   href: 'serialport2' }
+15 silly lockFile 0df840a6-serialport2 serialport2
+16 verbose lock serialport2 C:\Users\ebouvetdit\AppData\Roaming\npm-cache\0df840a6-serialport2.lock
+17 silly lockFile 0df840a6-serialport2 serialport2
+18 silly lockFile 0df840a6-serialport2 serialport2
+19 verbose addNamed [ 'serialport2', '' ]
+20 verbose addNamed [ null, '' ]
+21 silly lockFile e94970ef-serialport2 serialport2@
+22 verbose lock serialport2@ C:\Users\ebouvetdit\AppData\Roaming\npm-cache\e94970ef-serialport2.lock
+23 silly addNameRange { name: 'serialport2', range: '', hasData: false }
+24 verbose url raw serialport2
+25 verbose url resolving [ 'https://registry.npmjs.org/', './serialport2' ]
+26 verbose url resolved https://registry.npmjs.org/serialport2
+27 info trying registry request attempt 1 at 11:29:27
+28 verbose etag "82KYDZVM1PWJ1F1PLHW24U9U7"
+29 http GET https://registry.npmjs.org/serialport2
+30 http 304 https://registry.npmjs.org/serialport2
+31 silly registry.get cb [ 304,
+31 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+31 silly registry.get     etag: '"82KYDZVM1PWJ1F1PLHW24U9U7"',
+31 silly registry.get     date: 'Wed, 03 Jul 2013 09:29:28 GMT',
+31 silly registry.get     'content-length': '0' } ]
+32 verbose etag serialport2 from cache
+33 silly addNameRange number 2 { name: 'serialport2', range: '', hasData: true }
+34 silly addNameRange versions [ 'serialport2',
+34 silly addNameRange   [ '0.0.1', '0.0.2', '0.0.3', '0.0.4', '0.0.5' ] ]
+35 verbose addNamed [ 'serialport2', '0.0.5' ]
+36 verbose addNamed [ '0.0.5', '0.0.5' ]
+37 silly lockFile d5afd329-serialport2-0-0-5 serialport2@0.0.5
+38 verbose lock serialport2@0.0.5 C:\Users\ebouvetdit\AppData\Roaming\npm-cache\d5afd329-serialport2-0-0-5.lock
+39 verbose read json C:\Users\ebouvetdit\AppData\Roaming\npm-cache\serialport2\0.0.5\package\package.json
+40 silly lockFile d5afd329-serialport2-0-0-5 serialport2@0.0.5
+41 silly lockFile d5afd329-serialport2-0-0-5 serialport2@0.0.5
+42 silly lockFile e94970ef-serialport2 serialport2@
+43 silly lockFile e94970ef-serialport2 serialport2@
+44 silly resolved [ { name: 'serialport2',
+44 silly resolved     description: 'node.js serial port driver.',
+44 silly resolved     author: { name: 'Joe Ferner', email: 'joe.ferner@nearinfinity.com' },
+44 silly resolved     keywords: [ 'serial', 'serialport', 'com', 'comport', 'arduino' ],
+44 silly resolved     version: '0.0.5',
+44 silly resolved     engines: { node: '>=0.6.0' },
+44 silly resolved     maintainers: [ [Object] ],
+44 silly resolved     bugs: { url: 'https://github.com/joeferner/node-serialport2/issues' },
+44 silly resolved     license: 'MIT',
+44 silly resolved     repository:
+44 silly resolved      { type: 'git',
+44 silly resolved        url: 'https://github.com/joeferner/node-serialport2.git' },
+44 silly resolved     dependencies:
+44 silly resolved      { bindings: '0.3.0',
+44 silly resolved        async: '0.1.18',
+44 silly resolved        sf: '0.1.3',
+44 silly resolved        optimist: '~0.3.4' },
+44 silly resolved     devDependencies: { nodeunit: '~0.7.4' },
+44 silly resolved     scripts:
+44 silly resolved      { test: 'node ./node_modules/nodeunit/bin/nodeunit test',
+44 silly resolved        install: 'node-gyp rebuild' },
+44 silly resolved     main: './index.js',
+44 silly resolved     bin:
+44 silly resolved      { serialportlist: './bin/serialportList.js',
+44 silly resolved        serialportterm: './bin/serialportTerminal.js' },
+44 silly resolved     gypfile: true,
+44 silly resolved     readme: '# SerialPort2\n\nNode.js serial port driver. Works on Windows, OSX, and linux.\n\n# Install\n\n```\nnpm install serialport2\n```\n\n**Note for windows users.** If you are using Node v0.6.x you will need to have Python 2.7 installed.\nSee [node-gyp](https://github.com/TooTallNate/node-gyp) for instruction on getting a working node-gyp\nenvironment.\n\n# Quick Example\n\n```javascript\nvar SerialPort = require(\'serialport2\').SerialPort;\nvar port = new SerialPort();\n\nport.on(\'data\', function(data) {\n  console.log(data.toString());\n});\n\nport.on(\'error\', function(err) {\n  console.log(err);\n});\n\nport.open(\'COM4\', {\n  baudRate: 9600,\n  dataBits: 8,\n  parity: \'none\',\n  stopBits: 1\n}, function(err) {\n  port.write("hello world");\n  port.close();\n});\n```\n\n```javascript\nvar sp = require(\'../\');\nsp.list(function(err, ports) {\n  console.log(ports);\n});\n```\n\n# API\n\n## SerialPort\n\n### new SerialPort()\n\nCreates the serial port.\n\n### open(portName, [options], [callback])\n\nOpen the serial port.\n\n__Arguments__\n\n  * portName - The name of the port to open. Example: Windows \'COM1\', Linux \'/dev/ttyUSB0\'.\n  * options - Options for open\n    * baudRate - The baud rate [default: 9600]\n    * dataBits - The data bits [default: 8]\n    * parity - The parity, can be (none, odd, even) [default: \'none\']\n    * stopBits - The number of stop bits, can be (1, 1.5, 2) [default: 1]\n    * flowControl - Enable flow control (true, false) [default: false]\n  * callback(err) - Callback called after opening the port.\n\n### write(buffer, [callback])\n\nWrites data to the serial port.\n\n__Arguments__\n\n  * buffer - This can be a node Buffer object or a string.\n  * callback(err, byteWritten) - Callback called after writing bytes.\n\n### close(callback)\n\nCloses the serial port.\n\n__Arguments__\n\n  * callback(err) - Callback called after the port is closed.\n\n### Event: data\n\nEvent emitted by SerialPort when data is available. The first argument will contain a Buffer with the data.\n\n### Event: error\n\nEvent emitted by SerialPort if an error occurs. The first argument will contain the error.\n\n## list(callback)\n\nLists the serial ports on the machine.\n\n__Arguments__\n\n  * callback(err, ports) - Callback called after the list is retrieved.\n',
+44 silly resolved     readmeFilename: 'README.md',
+44 silly resolved     _id: 'serialport2@0.0.5',
+44 silly resolved     _from: 'serialport2@' } ]
+45 info install serialport2@0.0.5 into C:\Users\ebouvetdit\Documents\Projet
+46 info installOne serialport2@0.0.5
+47 verbose from cache C:\Users\ebouvetdit\AppData\Roaming\npm-cache\serialport2\0.0.5\package\package.json
+48 info C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2 unbuild
+49 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\package.json
+50 verbose tar unpack C:\Users\ebouvetdit\AppData\Roaming\npm-cache\serialport2\0.0.5\package.tgz
+51 silly lockFile bfb2e562--Projet-node-modules-serialport2 C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2
+52 verbose lock C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2 C:\Users\ebouvetdit\AppData\Roaming\npm-cache\bfb2e562--Projet-node-modules-serialport2.lock
+53 silly lockFile a8fdf9f2-he-serialport2-0-0-5-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\serialport2\0.0.5\package.tgz
+54 verbose lock C:\Users\ebouvetdit\AppData\Roaming\npm-cache\serialport2\0.0.5\package.tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\a8fdf9f2-he-serialport2-0-0-5-package-tgz.lock
+55 silly gunzTarPerm modes [ '755', '644' ]
+56 silly gunzTarPerm extractEntry package.json
+57 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+58 silly gunzTarPerm extractEntry .npmignore
+59 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+60 silly gunzTarPerm extractEntry README.md
+61 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+62 silly gunzTarPerm extractEntry index.js
+63 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+64 silly gunzTarPerm extractEntry bin/serialportList.js
+65 silly gunzTarPerm modified mode [ 'bin/serialportList.js', 438, 420 ]
+66 silly gunzTarPerm extractEntry bin/serialportTerminal.js
+67 silly gunzTarPerm modified mode [ 'bin/serialportTerminal.js', 438, 420 ]
+68 silly gunzTarPerm extractEntry binding.gyp
+69 silly gunzTarPerm modified mode [ 'binding.gyp', 438, 420 ]
+70 silly gunzTarPerm extractEntry lib/serialport.js
+71 silly gunzTarPerm modified mode [ 'lib/serialport.js', 438, 420 ]
+72 silly gunzTarPerm extractEntry src/serialport.cpp
+73 silly gunzTarPerm modified mode [ 'src/serialport.cpp', 438, 420 ]
+74 silly gunzTarPerm extractEntry src/serialport.h
+75 silly gunzTarPerm modified mode [ 'src/serialport.h', 438, 420 ]
+76 silly gunzTarPerm extractEntry src/serialport_unix.cpp
+77 silly gunzTarPerm modified mode [ 'src/serialport_unix.cpp', 438, 420 ]
+78 silly gunzTarPerm extractEntry src/serialport_win.cpp
+79 silly gunzTarPerm modified mode [ 'src/serialport_win.cpp', 438, 420 ]
+80 silly gunzTarPerm extractEntry src/win/disphelper.c
+81 silly gunzTarPerm modified mode [ 'src/win/disphelper.c', 438, 420 ]
+82 silly gunzTarPerm extractEntry src/win/disphelper.h
+83 silly gunzTarPerm modified mode [ 'src/win/disphelper.h', 438, 420 ]
+84 silly gunzTarPerm extractEntry test/echoTest.js
+85 silly gunzTarPerm modified mode [ 'test/echoTest.js', 438, 420 ]
+86 silly gunzTarPerm extractEntry test/arduinioEcho/arduinioEcho.ino
+87 silly gunzTarPerm modified mode [ 'test/arduinioEcho/arduinioEcho.ino', 438, 420 ]
+88 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\package.json
+89 silly lockFile bfb2e562--Projet-node-modules-serialport2 C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2
+90 silly lockFile bfb2e562--Projet-node-modules-serialport2 C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2
+91 silly lockFile a8fdf9f2-he-serialport2-0-0-5-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\serialport2\0.0.5\package.tgz
+92 silly lockFile a8fdf9f2-he-serialport2-0-0-5-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\serialport2\0.0.5\package.tgz
+93 info preinstall serialport2@0.0.5
+94 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\package.json
+95 verbose readDependencies using package.json deps
+96 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\package.json
+97 verbose readDependencies using package.json deps
+98 verbose cache add [ 'bindings@0.3.0', null ]
+99 verbose cache add name=undefined spec="bindings@0.3.0" args=["bindings@0.3.0",null]
+100 verbose parsed url { protocol: null,
+100 verbose parsed url   slashes: null,
+100 verbose parsed url   auth: null,
+100 verbose parsed url   host: null,
+100 verbose parsed url   port: null,
+100 verbose parsed url   hostname: null,
+100 verbose parsed url   hash: null,
+100 verbose parsed url   search: null,
+100 verbose parsed url   query: null,
+100 verbose parsed url   pathname: 'bindings@0.3.0',
+100 verbose parsed url   path: 'bindings@0.3.0',
+100 verbose parsed url   href: 'bindings@0.3.0' }
+101 verbose cache add name="bindings" spec="0.3.0" args=["bindings","0.3.0"]
+102 verbose parsed url { protocol: null,
+102 verbose parsed url   slashes: null,
+102 verbose parsed url   auth: null,
+102 verbose parsed url   host: null,
+102 verbose parsed url   port: null,
+102 verbose parsed url   hostname: null,
+102 verbose parsed url   hash: null,
+102 verbose parsed url   search: null,
+102 verbose parsed url   query: null,
+102 verbose parsed url   pathname: '0.3.0',
+102 verbose parsed url   path: '0.3.0',
+102 verbose parsed url   href: '0.3.0' }
+103 verbose addNamed [ 'bindings', '0.3.0' ]
+104 verbose addNamed [ '0.3.0', '0.3.0' ]
+105 silly lockFile a060d42a-bindings-0-3-0 bindings@0.3.0
+106 verbose lock bindings@0.3.0 C:\Users\ebouvetdit\AppData\Roaming\npm-cache\a060d42a-bindings-0-3-0.lock
+107 verbose cache add [ 'async@0.1.18', null ]
+108 verbose cache add name=undefined spec="async@0.1.18" args=["async@0.1.18",null]
+109 verbose parsed url { protocol: null,
+109 verbose parsed url   slashes: null,
+109 verbose parsed url   auth: null,
+109 verbose parsed url   host: null,
+109 verbose parsed url   port: null,
+109 verbose parsed url   hostname: null,
+109 verbose parsed url   hash: null,
+109 verbose parsed url   search: null,
+109 verbose parsed url   query: null,
+109 verbose parsed url   pathname: 'async@0.1.18',
+109 verbose parsed url   path: 'async@0.1.18',
+109 verbose parsed url   href: 'async@0.1.18' }
+110 verbose cache add name="async" spec="0.1.18" args=["async","0.1.18"]
+111 verbose parsed url { protocol: null,
+111 verbose parsed url   slashes: null,
+111 verbose parsed url   auth: null,
+111 verbose parsed url   host: null,
+111 verbose parsed url   port: null,
+111 verbose parsed url   hostname: null,
+111 verbose parsed url   hash: null,
+111 verbose parsed url   search: null,
+111 verbose parsed url   query: null,
+111 verbose parsed url   pathname: '0.1.18',
+111 verbose parsed url   path: '0.1.18',
+111 verbose parsed url   href: '0.1.18' }
+112 verbose addNamed [ 'async', '0.1.18' ]
+113 verbose addNamed [ '0.1.18', '0.1.18' ]
+114 silly lockFile b86dcd49-async-0-1-18 async@0.1.18
+115 verbose lock async@0.1.18 C:\Users\ebouvetdit\AppData\Roaming\npm-cache\b86dcd49-async-0-1-18.lock
+116 verbose cache add [ 'sf@0.1.3', null ]
+117 verbose cache add name=undefined spec="sf@0.1.3" args=["sf@0.1.3",null]
+118 verbose parsed url { protocol: null,
+118 verbose parsed url   slashes: null,
+118 verbose parsed url   auth: null,
+118 verbose parsed url   host: null,
+118 verbose parsed url   port: null,
+118 verbose parsed url   hostname: null,
+118 verbose parsed url   hash: null,
+118 verbose parsed url   search: null,
+118 verbose parsed url   query: null,
+118 verbose parsed url   pathname: 'sf@0.1.3',
+118 verbose parsed url   path: 'sf@0.1.3',
+118 verbose parsed url   href: 'sf@0.1.3' }
+119 verbose cache add name="sf" spec="0.1.3" args=["sf","0.1.3"]
+120 verbose parsed url { protocol: null,
+120 verbose parsed url   slashes: null,
+120 verbose parsed url   auth: null,
+120 verbose parsed url   host: null,
+120 verbose parsed url   port: null,
+120 verbose parsed url   hostname: null,
+120 verbose parsed url   hash: null,
+120 verbose parsed url   search: null,
+120 verbose parsed url   query: null,
+120 verbose parsed url   pathname: '0.1.3',
+120 verbose parsed url   path: '0.1.3',
+120 verbose parsed url   href: '0.1.3' }
+121 verbose addNamed [ 'sf', '0.1.3' ]
+122 verbose addNamed [ '0.1.3', '0.1.3' ]
+123 silly lockFile 444a19d3-sf-0-1-3 sf@0.1.3
+124 verbose lock sf@0.1.3 C:\Users\ebouvetdit\AppData\Roaming\npm-cache\444a19d3-sf-0-1-3.lock
+125 verbose cache add [ 'optimist@~0.3.4', null ]
+126 verbose cache add name=undefined spec="optimist@~0.3.4" args=["optimist@~0.3.4",null]
+127 verbose parsed url { protocol: null,
+127 verbose parsed url   slashes: null,
+127 verbose parsed url   auth: null,
+127 verbose parsed url   host: null,
+127 verbose parsed url   port: null,
+127 verbose parsed url   hostname: null,
+127 verbose parsed url   hash: null,
+127 verbose parsed url   search: null,
+127 verbose parsed url   query: null,
+127 verbose parsed url   pathname: 'optimist@~0.3.4',
+127 verbose parsed url   path: 'optimist@~0.3.4',
+127 verbose parsed url   href: 'optimist@~0.3.4' }
+128 verbose cache add name="optimist" spec="~0.3.4" args=["optimist","~0.3.4"]
+129 verbose parsed url { protocol: null,
+129 verbose parsed url   slashes: null,
+129 verbose parsed url   auth: null,
+129 verbose parsed url   host: null,
+129 verbose parsed url   port: null,
+129 verbose parsed url   hostname: null,
+129 verbose parsed url   hash: null,
+129 verbose parsed url   search: null,
+129 verbose parsed url   query: null,
+129 verbose parsed url   pathname: '~0.3.4',
+129 verbose parsed url   path: '~0.3.4',
+129 verbose parsed url   href: '~0.3.4' }
+130 verbose addNamed [ 'optimist', '~0.3.4' ]
+131 verbose addNamed [ null, '>=0.3.4- <0.4.0-' ]
+132 silly lockFile 094c60bd-optimist-0-3-4 optimist@~0.3.4
+133 verbose lock optimist@~0.3.4 C:\Users\ebouvetdit\AppData\Roaming\npm-cache\094c60bd-optimist-0-3-4.lock
+134 silly addNameRange { name: 'optimist', range: '>=0.3.4- <0.4.0-', hasData: false }
+135 verbose url raw sf/0.1.3
+136 verbose url resolving [ 'https://registry.npmjs.org/', './sf/0.1.3' ]
+137 verbose url resolved https://registry.npmjs.org/sf/0.1.3
+138 info trying registry request attempt 1 at 11:29:29
+139 verbose etag "9605GR0I3P9PKD5UGUWGBCC43"
+140 http GET https://registry.npmjs.org/sf/0.1.3
+141 verbose url raw bindings/0.3.0
+142 verbose url resolving [ 'https://registry.npmjs.org/', './bindings/0.3.0' ]
+143 verbose url resolved https://registry.npmjs.org/bindings/0.3.0
+144 info trying registry request attempt 1 at 11:29:29
+145 verbose etag "R2LLIG8POBOWSORUXZMDTFRS"
+146 http GET https://registry.npmjs.org/bindings/0.3.0
+147 verbose url raw async/0.1.18
+148 verbose url resolving [ 'https://registry.npmjs.org/', './async/0.1.18' ]
+149 verbose url resolved https://registry.npmjs.org/async/0.1.18
+150 info trying registry request attempt 1 at 11:29:29
+151 verbose etag "62ME7L4JWGYL3M1M00RY0C7D5"
+152 http GET https://registry.npmjs.org/async/0.1.18
+153 verbose url raw optimist
+154 verbose url resolving [ 'https://registry.npmjs.org/', './optimist' ]
+155 verbose url resolved https://registry.npmjs.org/optimist
+156 info trying registry request attempt 1 at 11:29:29
+157 verbose etag "8XM3FRCG8LVIR07J4DO7MAN8V"
+158 http GET https://registry.npmjs.org/optimist
+159 http 304 https://registry.npmjs.org/bindings/0.3.0
+160 silly registry.get cb [ 304,
+160 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+160 silly registry.get     etag: '"R2LLIG8POBOWSORUXZMDTFRS"',
+160 silly registry.get     date: 'Wed, 03 Jul 2013 09:29:30 GMT',
+160 silly registry.get     'content-length': '0' } ]
+161 verbose etag bindings/0.3.0 from cache
+162 verbose read json C:\Users\ebouvetdit\AppData\Roaming\npm-cache\bindings\0.3.0\package\package.json
+163 silly lockFile a060d42a-bindings-0-3-0 bindings@0.3.0
+164 silly lockFile a060d42a-bindings-0-3-0 bindings@0.3.0
+165 http 304 https://registry.npmjs.org/async/0.1.18
+166 silly registry.get cb [ 304,
+166 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+166 silly registry.get     etag: '"62ME7L4JWGYL3M1M00RY0C7D5"',
+166 silly registry.get     date: 'Wed, 03 Jul 2013 09:29:30 GMT',
+166 silly registry.get     'content-length': '0' } ]
+167 verbose etag async/0.1.18 from cache
+168 http 304 https://registry.npmjs.org/optimist
+169 silly registry.get cb [ 304,
+169 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+169 silly registry.get     etag: '"8XM3FRCG8LVIR07J4DO7MAN8V"',
+169 silly registry.get     date: 'Wed, 03 Jul 2013 09:29:30 GMT',
+169 silly registry.get     'content-length': '0' } ]
+170 verbose etag optimist from cache
+171 verbose read json C:\Users\ebouvetdit\AppData\Roaming\npm-cache\async\0.1.18\package\package.json
+172 silly addNameRange number 2 { name: 'optimist', range: '>=0.3.4- <0.4.0-', hasData: true }
+173 silly addNameRange versions [ 'optimist',
+173 silly addNameRange   [ '0.0.1',
+173 silly addNameRange     '0.0.2',
+173 silly addNameRange     '0.0.4',
+173 silly addNameRange     '0.0.5',
+173 silly addNameRange     '0.0.6',
+173 silly addNameRange     '0.0.7',
+173 silly addNameRange     '0.1.0',
+173 silly addNameRange     '0.1.1',
+173 silly addNameRange     '0.1.2',
+173 silly addNameRange     '0.1.3',
+173 silly addNameRange     '0.1.4',
+173 silly addNameRange     '0.1.5',
+173 silly addNameRange     '0.1.6',
+173 silly addNameRange     '0.1.7',
+173 silly addNameRange     '0.1.8',
+173 silly addNameRange     '0.1.9',
+173 silly addNameRange     '0.0.3',
+173 silly addNameRange     '0.2.0',
+173 silly addNameRange     '0.2.1',
+173 silly addNameRange     '0.2.2',
+173 silly addNameRange     '0.2.3',
+173 silly addNameRange     '0.2.4',
+173 silly addNameRange     '0.2.5',
+173 silly addNameRange     '0.2.6',
+173 silly addNameRange     '0.2.7',
+173 silly addNameRange     '0.2.8',
+173 silly addNameRange     '0.3.0',
+173 silly addNameRange     '0.3.1',
+173 silly addNameRange     '0.3.3',
+173 silly addNameRange     '0.3.4',
+173 silly addNameRange     '0.3.5',
+173 silly addNameRange     '0.3.6',
+173 silly addNameRange     '0.3.7',
+173 silly addNameRange     '0.4.0',
+173 silly addNameRange     '0.5.0',
+173 silly addNameRange     '0.5.1',
+173 silly addNameRange     '0.5.2',
+173 silly addNameRange     '0.6.0' ] ]
+174 verbose addNamed [ 'optimist', '0.3.7' ]
+175 verbose addNamed [ '0.3.7', '0.3.7' ]
+176 silly lockFile 090e1d8d-optimist-0-3-7 optimist@0.3.7
+177 verbose lock optimist@0.3.7 C:\Users\ebouvetdit\AppData\Roaming\npm-cache\090e1d8d-optimist-0-3-7.lock
+178 silly lockFile b86dcd49-async-0-1-18 async@0.1.18
+179 silly lockFile b86dcd49-async-0-1-18 async@0.1.18
+180 verbose read json C:\Users\ebouvetdit\AppData\Roaming\npm-cache\optimist\0.3.7\package\package.json
+181 silly lockFile 090e1d8d-optimist-0-3-7 optimist@0.3.7
+182 silly lockFile 090e1d8d-optimist-0-3-7 optimist@0.3.7
+183 silly lockFile 094c60bd-optimist-0-3-4 optimist@~0.3.4
+184 silly lockFile 094c60bd-optimist-0-3-4 optimist@~0.3.4
+185 http 304 https://registry.npmjs.org/sf/0.1.3
+186 silly registry.get cb [ 304,
+186 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+186 silly registry.get     etag: '"9605GR0I3P9PKD5UGUWGBCC43"',
+186 silly registry.get     date: 'Wed, 03 Jul 2013 09:29:32 GMT',
+186 silly registry.get     'content-length': '0' } ]
+187 verbose etag sf/0.1.3 from cache
+188 verbose read json C:\Users\ebouvetdit\AppData\Roaming\npm-cache\sf\0.1.3\package\package.json
+189 silly lockFile 444a19d3-sf-0-1-3 sf@0.1.3
+190 silly lockFile 444a19d3-sf-0-1-3 sf@0.1.3
+191 silly resolved [ { name: 'bindings',
+191 silly resolved     description: 'Helper module for loading your native module\'s bindings in a cross-platform way',
+191 silly resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp' ],
+191 silly resolved     version: '0.3.0',
+191 silly resolved     author:
+191 silly resolved      { name: 'Nathan Rajlich',
+191 silly resolved        email: 'nathan@tootallnate.net',
+191 silly resolved        url: 'http://tootallnate.net' },
+191 silly resolved     repository:
+191 silly resolved      { type: 'git',
+191 silly resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+191 silly resolved     main: './bindings.js',
+191 silly resolved     engines: { node: '*' },
+191 silly resolved     readme: 'node-bindings\n=============\n### Helper module for loading your native module\'s bindings in a cross-platform way.\n\nThis is a helper module for authors of Node.js native addon modules. In node >=\n0.7.0, it is encouraged to statically precompile your native addons for your\nvarious supported platforms and architectures, rather than depend on your users\nto do that. This adds two new burdens on the developer that we now need to\nconsider while writing our module:\n\n 1. You now have to compile the bindings yourself, before publishing the module.\n 2. You now have to figure out which version of the bindings to load at runtime.\n\n`node-bindings` attempts to solve probelm `#2`.\n\nThis module solves the organizational problem of how to store these bindings\nfiles with a simple directory convention:\n\n```\n<module_root>/compiled/<node_version>/<platform>/<arch>/bindings.node\n```\n\nSo for example, on a 32-bit Windows platform, running node `v0.6.9`, the\n`bindings.node` file should be placed in:\n\n```\n<module_root>/compiled/0.6/win32/ia32/bindings.node\n```\n\nOn 64-bit Mac OS X, running node `v0.7.1`, then the bindings file should be\nplaced in:\n\n```\n<module_root>/compiled/0.7/darwin/x64/bindings.node\n```\n\nFor reference, the calculations for the various parts that makes up the require\npath are:\n\n * `<module_root>` - The directory where `package.json` is found is the root.\n * `<platform>` - `process.platform`\n * `<arch>` - `process.arch`\n * `<node_version>` - `parseFloat(process.versions.node)`\n\nThe default "compiled" directory is `compiled` and the default name of every\n"bindings" file is `bindings.node`. This is configurable if you\'d like.\n\n\nInstallation\n------------\n\nInstall with `npm`:\n\n``` bash\n$ npm install bindings\n```\n\n\nExample\n-------\n\n`require()`ing the proper bindings file for the current node version, platform\nand architecture is as simple as:\n\n``` js\nvar bindings = require(\'bindings\')()\n\n// Use your bindings defined in your C files\nbindings.your_c_function()\n```\n\nYou can specify the name of the bindings file if you desire:\n\n``` js\nvar bindings = require(\'bindings\')(\'my_bindings\')\n```\n\nOr you can pass in an options Object for full configuration:\n\n\n``` js\nvar bindings = require(\'bindings\')({\n    bindings: \'my_bindings\'\n  , compiled: \'builddir\'\n})\n```\n\nNice Error Output\n-----------------\n\n```\nError: Could not load the bindings file. Tried:\n -> /Users/nrajlich/node-ffi/out/Debug/ffi_bindings.node\n -> /Users/nrajlich/node-ffi/Debug/ffi_bindings.node\n -> /Users/nrajlich/node-ffi/out/Release/ffi_bindings.node\n -> /Users/nrajlich/node-ffi/Release/ffi_bindings.node\n -> /Users/nrajlich/node-ffi/compiled/0.6/darwin/x64/ffi_bindings.node\n -> /Users/nrajlich/node-ffi/build/Release/ffi_bindings.node\n -> /Users/nrajlich/node-ffi/build/default/ffi_bindings.node\n    at bindings (/Users/nrajlich/node-ffi/node_modules/bindings/bindings.js:80:13)\n    at Object.<anonymous> (/Users/nrajlich/node-ffi/lib/ffi.js:3:34)\n    at Module._compile (module.js:441:26)\n    at Object..js (module.js:459:10)\n    at Module.load (module.js:348:31)\n    at Function._load (module.js:308:12)\n    ...\n```\n\nLicense\n-------\n\n(The MIT License)\n\nCopyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+191 silly resolved     readmeFilename: 'README.md',
+191 silly resolved     _id: 'bindings@0.3.0',
+191 silly resolved     _from: 'bindings@0.3.0' },
+191 silly resolved   { name: 'async',
+191 silly resolved     description: 'Higher-order functions and common patterns for asynchronous code',
+191 silly resolved     main: './index',
+191 silly resolved     author: { name: 'Caolan McMahon' },
+191 silly resolved     version: '0.1.18',
+191 silly resolved     repository: { type: 'git', url: 'http://github.com/caolan/async.git' },
+191 silly resolved     bugs: { url: 'http://github.com/caolan/async/issues' },
+191 silly resolved     licenses: [ [Object] ],
+191 silly resolved     devDependencies: { nodeunit: '>0.0.0', 'uglify-js': '1.2.x', nodelint: '>0.0.0' },
+191 silly resolved     readme: '# Async.js\n\nAsync is a utility module which provides straight-forward, powerful functions\nfor working with asynchronous JavaScript. Although originally designed for\nuse with [node.js](http://nodejs.org), it can also be used directly in the\nbrowser.\n\nAsync provides around 20 functions that include the usual \'functional\'\nsuspects (map, reduce, filter, forEach…) as well as some common patterns\nfor asynchronous control flow (parallel, series, waterfall…). All these\nfunctions assume you follow the node.js convention of providing a single\ncallback as the last argument of your async function.\n\n\n## Quick Examples\n\n    async.map([\'file1\',\'file2\',\'file3\'], fs.stat, function(err, results){\n        // results is now an array of stats for each file\n    });\n\n    async.filter([\'file1\',\'file2\',\'file3\'], path.exists, function(results){\n        // results now equals an array of the existing files\n    });\n\n    async.parallel([\n        function(){ ... },\n        function(){ ... }\n    ], callback);\n\n    async.series([\n        function(){ ... },\n        function(){ ... }\n    ]);\n\nThere are many more functions available so take a look at the docs below for a\nfull list. This module aims to be comprehensive, so if you feel anything is\nmissing please create a GitHub issue for it.\n\n\n## Download\n\nReleases are available for download from\n[GitHub](http://github.com/caolan/async/downloads).\nAlternatively, you can install using Node Package Manager (npm):\n\n    npm install async\n\n\n__Development:__ [async.js](https://github.com/caolan/async/raw/master/lib/async.js) - 17.5kb Uncompressed\n\n__Production:__ [async.min.js](https://github.com/caolan/async/raw/master/dist/async.min.js) - 1.7kb Packed and Gzipped\n\n\n## In the Browser\n\nSo far its been tested in IE6, IE7, IE8, FF3.6 and Chrome 5. Usage:\n\n    <script type="text/javascript" src="async.js"></script>\n    <script type="text/javascript">\n\n        async.map(data, asyncProcess, function(err, results){\n            alert(results);\n        });\n\n    </script>\n\n\n## Documentation\n\n### Collections\n\n* [forEach](#forEach)\n* [map](#map)\n* [filter](#filter)\n* [reject](#reject)\n* [reduce](#reduce)\n* [detect](#detect)\n* [sortBy](#sortBy)\n* [some](#some)\n* [every](#every)\n* [concat](#concat)\n\n### Control Flow\n\n* [series](#series)\n* [parallel](#parallel)\n* [whilst](#whilst)\n* [until](#until)\n* [waterfall](#waterfall)\n* [queue](#queue)\n* [auto](#auto)\n* [iterator](#iterator)\n* [apply](#apply)\n* [nextTick](#nextTick)\n\n### Utils\n\n* [memoize](#memoize)\n* [unmemoize](#unmemoize)\n* [log](#log)\n* [dir](#dir)\n* [noConflict](#noConflict)\n\n\n## Collections\n\n<a name="forEach" />\n### forEach(arr, iterator, callback)\n\nApplies an iterator function to each item in an array, in parallel.\nThe iterator is called with an item from the list and a callback for when it\nhas finished. If the iterator passes an error to this callback, the main\ncallback for the forEach function is immediately called with the error.\n\nNote, that since this function applies the iterator to each item in parallel\nthere is no guarantee that the iterator functions will complete in order.\n\n__Arguments__\n\n* arr - An array to iterate over.\n* iterator(item, callback) - A function to apply to each item in the array.\n  The iterator is passed a callback which must be called once it has completed.\n* callback(err) - A callback which is called after all the iterator functions\n  have finished, or an error has occurred.\n\n__Example__\n\n    // assuming openFiles is an array of file names and saveFile is a function\n    // to save the modified contents of that file:\n\n    async.forEach(openFiles, saveFile, function(err){\n        // if any of the saves produced an error, err would equal that error\n    });\n\n---------------------------------------\n\n<a name="forEachSeries" />\n### forEachSeries(arr, iterator, callback)\n\nThe same as forEach only the iterator is applied to each item in the array in\nseries. The next iterator is only called once the current one has completed\nprocessing. This means the iterator functions will complete in order.\n\n\n---------------------------------------\n\n<a name="forEachLimit" />\n### forEachLimit(arr, limit, iterator, callback)\n\nThe same as forEach only the iterator is applied to batches of items in the\narray, in series. The next batch of iterators is only called once the current\none has completed processing.\n\n__Arguments__\n\n* arr - An array to iterate over.\n* limit - How many items should be in each batch.\n* iterator(item, callback) - A function to apply to each item in the array.\n  The iterator is passed a callback which must be called once it has completed.\n* callback(err) - A callback which is called after all the iterator functions\n  have finished, or an error has occurred.\n\n__Example__\n\n    // Assume documents is an array of JSON objects and requestApi is a\n    // function that interacts with a rate-limited REST api.\n\n    async.forEachLimit(documents, 20, requestApi, function(err){\n        // if any of the saves produced an error, err would equal that error\n    });\n---------------------------------------\n\n<a name="map" />\n### map(arr, iterator, callback)\n\nProduces a new array of values by mapping each value in the given array through\nthe iterator function. The iterator is called with an item from the array and a\ncallback for when it has finished processing. The callback takes 2 arguments, \nan error and the transformed item from the array. If the iterator passes an\nerror to this callback, the main callback for the map function is immediately\ncalled with the error.\n\nNote, that since this function applies the iterator to each item in parallel\nthere is no guarantee that the iterator functions will complete in order, however\nthe results array will be in the same order as the original array.\n\n__Arguments__\n\n* arr - An array to iterate over.\n* iterator(item, callback) - A function to apply to each item in the array.\n  The iterator is passed a callback which must be called once it has completed\n  with an error (which can be null) and a transformed item.\n* callback(err, results) - A callback which is called after all the iterator\n  functions have finished, or an error has occurred. Results is an array of the\n  transformed items from the original array.\n\n__Example__\n\n    async.map([\'file1\',\'file2\',\'file3\'], fs.stat, function(err, results){\n        // results is now an array of stats for each file\n    });\n\n---------------------------------------\n\n<a name="mapSeries" />\n### mapSeries(arr, iterator, callback)\n\nThe same as map only the iterator is applied to each item in the array in\nseries. The next iterator is only called once the current one has completed\nprocessing. The results array will be in the same order as the original.\n\n\n---------------------------------------\n\n<a name="filter" />\n### filter(arr, iterator, callback)\n\n__Alias:__ select\n\nReturns a new array of all the values which pass an async truth test.\n_The callback for each iterator call only accepts a single argument of true or\nfalse, it does not accept an error argument first!_ This is in-line with the\nway node libraries work with truth tests like path.exists. This operation is\nperformed in parallel, but the results array will be in the same order as the\noriginal.\n\n__Arguments__\n\n* arr - An array to iterate over.\n* iterator(item, callback) - A truth test to apply to each item in the array.\n  The iterator is passed a callback which must be called once it has completed.\n* callback(results) - A callback which is called after all the iterator\n  functions have finished.\n\n__Example__\n\n    async.filter([\'file1\',\'file2\',\'file3\'], path.exists, function(results){\n        // results now equals an array of the existing files\n    });\n\n---------------------------------------\n\n<a name="filterSeries" />\n### filterSeries(arr, iterator, callback)\n\n__alias:__ selectSeries\n\nThe same as filter only the iterator is applied to each item in the array in\nseries. The next iterator is only called once the current one has completed\nprocessing. The results array will be in the same order as the original.\n\n---------------------------------------\n\n<a name="reject" />\n### reject(arr, iterator, callback)\n\nThe opposite of filter. Removes values that pass an async truth test.\n\n---------------------------------------\n\n<a name="rejectSeries" />\n### rejectSeries(arr, iterator, callback)\n\nThe same as filter, only the iterator is applied to each item in the array\nin series.\n\n\n---------------------------------------\n\n<a name="reduce" />\n### reduce(arr, memo, iterator, callback)\n\n__aliases:__ inject, foldl\n\nReduces a list of values into a single value using an async iterator to return\neach successive step. Memo is the initial state of the reduction. This\nfunction only operates in series. For performance reasons, it may make sense to\nsplit a call to this function into a parallel map, then use the normal\nArray.prototype.reduce on the results. This function is for situations where\neach step in the reduction needs to be async, if you can get the data before\nreducing it then its probably a good idea to do so.\n\n__Arguments__\n\n* arr - An array to iterate over.\n* memo - The initial state of the reduction.\n* iterator(memo, item, callback) - A function applied to each item in the\n  array to produce the next step in the reduction. The iterator is passed a\n  callback which accepts an optional error as its first argument, and the state\n  of the reduction as the second. If an error is passed to the callback, the\n  reduction is stopped and the main callback is immediately called with the\n  error.\n* callback(err, result) - A callback which is called after all the iterator\n  functions have finished. Result is the reduced value.\n\n__Example__\n\n    async.reduce([1,2,3], 0, function(memo, item, callback){\n        // pointless async:\n        process.nextTick(function(){\n            callback(null, memo + item)\n        });\n    }, function(err, result){\n        // result is now equal to the last value of memo, which is 6\n    });\n\n---------------------------------------\n\n<a name="reduceRight" />\n### reduceRight(arr, memo, iterator, callback)\n\n__Alias:__ foldr\n\nSame as reduce, only operates on the items in the array in reverse order.\n\n\n---------------------------------------\n\n<a name="detect" />\n### detect(arr, iterator, callback)\n\nReturns the first value in a list that passes an async truth test. The\niterator is applied in parallel, meaning the first iterator to return true will\nfire the detect callback with that result. That means the result might not be\nthe first item in the original array (in terms of order) that passes the test.\n\nIf order within the original array is important then look at detectSeries.\n\n__Arguments__\n\n* arr - An array to iterate over.\n* iterator(item, callback) - A truth test to apply to each item in the array.\n  The iterator is passed a callback which must be called once it has completed.\n* callback(result) - A callback which is called as soon as any iterator returns\n  true, or after all the iterator functions have finished. Result will be\n  the first item in the array that passes the truth test (iterator) or the\n  value undefined if none passed.\n\n__Example__\n\n    async.detect([\'file1\',\'file2\',\'file3\'], path.exists, function(result){\n        // result now equals the first file in the list that exists\n    });\n\n---------------------------------------\n\n<a name="detectSeries" />\n### detectSeries(arr, iterator, callback)\n\nThe same as detect, only the iterator is applied to each item in the array\nin series. This means the result is always the first in the original array (in\nterms of array order) that passes the truth test.\n\n\n---------------------------------------\n\n<a name="sortBy" />\n### sortBy(arr, iterator, callback)\n\nSorts a list by the results of running each value through an async iterator.\n\n__Arguments__\n\n* arr - An array to iterate over.\n* iterator(item, callback) - A function to apply to each item in the array.\n  The iterator is passed a callback which must be called once it has completed\n  with an error (which can be null) and a value to use as the sort criteria.\n* callback(err, results) - A callback which is called after all the iterator\n  functions have finished, or an error has occurred. Results is the items from\n  the original array sorted by the values returned by the iterator calls.\n\n__Example__\n\n    async.sortBy([\'file1\',\'file2\',\'file3\'], function(file, callback){\n        fs.stat(file, function(err, stats){\n            callback(err, stats.mtime);\n        });\n    }, function(err, results){\n        // results is now the original array of files sorted by\n        // modified date\n    });\n\n\n---------------------------------------\n\n<a name="some" />\n### some(arr, iterator, callback)\n\n__Alias:__ any\n\nReturns true if at least one element in the array satisfies an async test.\n_The callback for each iterator call only accepts a single argument of true or\nfalse, it does not accept an error argument first!_ This is in-line with the\nway node libraries work with truth tests like path.exists. Once any iterator\ncall returns true, the main callback is immediately called.\n\n__Arguments__\n\n* arr - An array to iterate over.\n* iterator(item, callback) - A truth test to apply to each item in the array.\n  The iterator is passed a callback which must be called once it has completed.\n* callback(result) - A callback which is called as soon as any iterator returns\n  true, or after all the iterator functions have finished. Result will be\n  either true or false depending on the values of the async tests.\n\n__Example__\n\n    async.some([\'file1\',\'file2\',\'file3\'], path.exists, function(result){\n        // if result is true then at least one of the files exists\n    });\n\n---------------------------------------\n\n<a name="every" />\n### every(arr, iterator, callback)\n\n__Alias:__ all\n\nReturns true if every element in the array satisfies an async test.\n_The callback for each iterator call only accepts a single argument of true or\nfalse, it does not accept an error argument first!_ This is in-line with the\nway node libraries work with truth tests like path.exists.\n\n__Arguments__\n\n* arr - An array to iterate over.\n* iterator(item, callback) - A truth test to apply to each item in the array.\n  The iterator is passed a callback which must be called once it has completed.\n* callback(result) - A callback which is called after all the iterator\n  functions have finished. Result will be either true or false depending on\n  the values of the async tests.\n\n__Example__\n\n    async.every([\'file1\',\'file2\',\'file3\'], path.exists, function(result){\n        // if result is true then every file exists\n    });\n\n---------------------------------------\n\n<a name="concat" />\n### concat(arr, iterator, callback)\n\nApplies an iterator to each item in a list, concatenating the results. Returns the\nconcatenated list. The iterators are called in parallel, and the results are\nconcatenated as they return. There is no guarantee that the results array will\nbe returned in the original order of the arguments passed to the iterator function.\n\n__Arguments__\n\n* arr - An array to iterate over\n* iterator(item, callback) - A function to apply to each item in the array.\n  The iterator is passed a callback which must be called once it has completed\n  with an error (which can be null) and an array of results.\n* callback(err, results) - A callback which is called after all the iterator\n  functions have finished, or an error has occurred. Results is an array containing\n  the concatenated results of the iterator function.\n\n__Example__\n\n    async.concat([\'dir1\',\'dir2\',\'dir3\'], fs.readdir, function(err, files){\n        // files is now a list of filenames that exist in the 3 directories\n    });\n\n---------------------------------------\n\n<a name="concatSeries" />\n### concatSeries(arr, iterator, callback)\n\nSame as async.concat, but executes in series instead of parallel.\n\n\n## Control Flow\n\n<a name="series" />\n### series(tasks, [callback])\n\nRun an array of functions in series, each one running once the previous\nfunction has completed. If any functions in the series pass an error to its\ncallback, no more functions are run and the callback for the series is\nimmediately called with the value of the error. Once the tasks have completed,\nthe results are passed to the final callback as an array.\n\nIt is also possible to use an object instead of an array. Each property will be\nrun as a function and the results will be passed to the final callback as an object\ninstead of an array. This can be a more readable way of handling results from\nasync.series.\n\n\n__Arguments__\n\n* tasks - An array or object containing functions to run, each function is passed\n  a callback it must call on completion.\n* callback(err, results) - An optional callback to run once all the functions\n  have completed. This function gets an array of all the arguments passed to\n  the callbacks used in the array.\n\n__Example__\n\n    async.series([\n        function(callback){\n            // do some stuff ...\n            callback(null, \'one\');\n        },\n        function(callback){\n            // do some more stuff ...\n            callback(null, \'two\');\n        },\n    ],\n    // optional callback\n    function(err, results){\n        // results is now equal to [\'one\', \'two\']\n    });\n\n\n    // an example using an object instead of an array\n    async.series({\n        one: function(callback){\n            setTimeout(function(){\n                callback(null, 1);\n            }, 200);\n        },\n        two: function(callback){\n            setTimeout(function(){\n                callback(null, 2);\n            }, 100);\n        },\n    },\n    function(err, results) {\n        // results is now equal to: {one: 1, two: 2}\n    });\n\n\n---------------------------------------\n\n<a name="parallel" />\n### parallel(tasks, [callback])\n\nRun an array of functions in parallel, without waiting until the previous\nfunction has completed. If any of the functions pass an error to its\ncallback, the main callback is immediately called with the value of the error.\nOnce the tasks have completed, the results are passed to the final callback as an\narray.\n\nIt is also possible to use an object instead of an array. Each property will be\nrun as a function and the results will be passed to the final callback as an object\ninstead of an array. This can be a more readable way of handling results from\nasync.parallel.\n\n\n__Arguments__\n\n* tasks - An array or object containing functions to run, each function is passed a\n  callback it must call on completion.\n* callback(err, results) - An optional callback to run once all the functions\n  have completed. This function gets an array of all the arguments passed to\n  the callbacks used in the array.\n\n__Example__\n\n    async.parallel([\n        function(callback){\n            setTimeout(function(){\n                callback(null, \'one\');\n            }, 200);\n        },\n        function(callback){\n            setTimeout(function(){\n                callback(null, \'two\');\n            }, 100);\n        },\n    ],\n    // optional callback\n    function(err, results){\n        // in this case, the results array will equal [\'two\',\'one\']\n        // because the functions were run in parallel and the second\n        // function had a shorter timeout before calling the callback.\n    });\n\n\n    // an example using an object instead of an array\n    async.parallel({\n        one: function(callback){\n            setTimeout(function(){\n                callback(null, 1);\n            }, 200);\n        },\n        two: function(callback){\n            setTimeout(function(){\n                callback(null, 2);\n            }, 100);\n        },\n    },\n    function(err, results) {\n        // results is now equals to: {one: 1, two: 2}\n    });\n\n\n---------------------------------------\n\n<a name="whilst" />\n### whilst(test, fn, callback)\n\nRepeatedly call fn, while test returns true. Calls the callback when stopped,\nor an error occurs.\n\n__Arguments__\n\n* test() - synchronous truth test to perform before each execution of fn.\n* fn(callback) - A function to call each time the test passes. The function is\n  passed a callback which must be called once it has completed with an optional\n  error as the first argument.\n* callback(err) - A callback which is called after the test fails and repeated\n  execution of fn has stopped.\n\n__Example__\n\n    var count = 0;\n\n    async.whilst(\n        function () { return count < 5; },\n        function (callback) {\n            count++;\n            setTimeout(callback, 1000);\n        },\n        function (err) {\n            // 5 seconds have passed\n        }\n    );\n\n\n---------------------------------------\n\n<a name="until" />\n### until(test, fn, callback)\n\nRepeatedly call fn, until test returns true. Calls the callback when stopped,\nor an error occurs.\n\nThe inverse of async.whilst.\n\n\n---------------------------------------\n\n<a name="waterfall" />\n### waterfall(tasks, [callback])\n\nRuns an array of functions in series, each passing their results to the next in\nthe array. However, if any of the functions pass an error to the callback, the\nnext function is not executed and the main callback is immediately called with\nthe error.\n\n__Arguments__\n\n* tasks - An array of functions to run, each function is passed a callback it\n  must call on completion.\n* callback(err, [results]) - An optional callback to run once all the functions\n  have completed. This will be passed the results of the last task\'s callback.\n\n\n\n__Example__\n\n    async.waterfall([\n        function(callback){\n            callback(null, \'one\', \'two\');\n        },\n        function(arg1, arg2, callback){\n            callback(null, \'three\');\n        },\n        function(arg1, callback){\n            // arg1 now equals \'three\'\n            callback(null, \'done\');\n        }\n    ], function (err, result) {\n       // result now equals \'done\'    \n    });\n\n\n---------------------------------------\n\n<a name="queue" />\n### queue(worker, concurrency)\n\nCreates a queue object with the specified concurrency. Tasks added to the\nqueue will be processed in parallel (up to the concurrency limit). If all\nworkers are in progress, the task is queued until one is available. Once\na worker has completed a task, the task\'s callback is called.\n\n__Arguments__\n\n* worker(task, callback) - An asynchronous function for processing a queued\n  task.\n* concurrency - An integer for determining how many worker functions should be\n  run in parallel.\n\n__Queue objects__\n\nThe queue object returned by this function has the following properties and\nmethods:\n\n* length() - a function returning the number of items waiting to be processed.\n* concurrency - an integer for determining how many worker functions should be\n  run in parallel. This property can be changed after a queue is created to\n  alter the concurrency on-the-fly.\n* push(task, [callback]) - add a new task to the queue, the callback is called\n  once the worker has finished processing the task.\n  instead of a single task, an array of tasks can be submitted. the respective callback is used for every task in the list.\n* saturated - a callback that is called when the queue length hits the concurrency and further tasks will be queued\n* empty - a callback that is called when the last item from the queue is given to a worker\n* drain - a callback that is called when the last item from the queue has returned from the worker\n\n__Example__\n\n    // create a queue object with concurrency 2\n\n    var q = async.queue(function (task, callback) {\n        console.log(\'hello \' + task.name);\n        callback();\n    }, 2);\n\n\n    // assign a callback\n    q.drain = function() {\n        console.log(\'all items have been processed\');\n    }\n\n    // add some items to the queue\n\n    q.push({name: \'foo\'}, function (err) {\n        console.log(\'finished processing foo\');\n    });\n    q.push({name: \'bar\'}, function (err) {\n        console.log(\'finished processing bar\');\n    });\n\n    // add some items to the queue (batch-wise)\n\n    q.push([{name: \'baz\'},{name: \'bay\'},{name: \'bax\'}], function (err) {\n        console.log(\'finished processing bar\');\n    });\n\n\n---------------------------------------\n\n<a name="auto" />\n### auto(tasks, [callback])\n\nDetermines the best order for running functions based on their requirements.\nEach function can optionally depend on other functions being completed first,\nand each function is run as soon as its requirements are satisfied. If any of\nthe functions pass an error to their callback, that function will not complete\n(so any other functions depending on it will not run) and the main callback\nwill be called immediately with the error. Functions also receive an object\ncontaining the results of functions which have completed so far.\n\n__Arguments__\n\n* tasks - An object literal containing named functions or an array of\n  requirements, with the function itself the last item in the array. The key\n  used for each function or array is used when specifying requirements. The\n  syntax is easier to understand by looking at the example.\n* callback(err, results) - An optional callback which is called when all the\n  tasks have been completed. The callback will receive an error as an argument\n  if any tasks pass an error to their callback. If all tasks complete\n  successfully, it will receive an object containing their results.\n\n__Example__\n\n    async.auto({\n        get_data: function(callback){\n            // async code to get some data\n        },\n        make_folder: function(callback){\n            // async code to create a directory to store a file in\n            // this is run at the same time as getting the data\n        },\n        write_file: [\'get_data\', \'make_folder\', function(callback){\n            // once there is some data and the directory exists,\n            // write the data to a file in the directory\n            callback(null, filename);\n        }],\n        email_link: [\'write_file\', function(callback, results){\n            // once the file is written let\'s email a link to it...\n            // results.write_file contains the filename returned by write_file.\n        }]\n    });\n\nThis is a fairly trivial example, but to do this using the basic parallel and\nseries functions would look like this:\n\n    async.parallel([\n        function(callback){\n            // async code to get some data\n        },\n        function(callback){\n            // async code to create a directory to store a file in\n            // this is run at the same time as getting the data\n        }\n    ],\n    function(results){\n        async.series([\n            function(callback){\n                // once there is some data and the directory exists,\n                // write the data to a file in the directory\n            },\n            email_link: function(callback){\n                // once the file is written let\'s email a link to it...\n            }\n        ]);\n    });\n\nFor a complicated series of async tasks using the auto function makes adding\nnew tasks much easier and makes the code more readable.\n\n\n---------------------------------------\n\n<a name="iterator" />\n### iterator(tasks)\n\nCreates an iterator function which calls the next function in the array,\nreturning a continuation to call the next one after that. Its also possible to\n\'peek\' the next iterator by doing iterator.next().\n\nThis function is used internally by the async module but can be useful when\nyou want to manually control the flow of functions in series.\n\n__Arguments__\n\n* tasks - An array of functions to run, each function is passed a callback it\n  must call on completion.\n\n__Example__\n\n    var iterator = async.iterator([\n        function(){ sys.p(\'one\'); },\n        function(){ sys.p(\'two\'); },\n        function(){ sys.p(\'three\'); }\n    ]);\n\n    node> var iterator2 = iterator();\n    \'one\'\n    node> var iterator3 = iterator2();\n    \'two\'\n    node> iterator3();\n    \'three\'\n    node> var nextfn = iterator2.next();\n    node> nextfn();\n    \'three\'\n\n\n---------------------------------------\n\n<a name="apply" />\n### apply(function, arguments..)\n\nCreates a continuation function with some arguments already applied, a useful\nshorthand when combined with other control flow functions. Any arguments\npassed to the returned function are added to the arguments originally passed\nto apply.\n\n__Arguments__\n\n* function - The function you want to eventually apply all arguments to.\n* arguments... - Any number of arguments to automatically apply when the\n  continuation is called.\n\n__Example__\n\n    // using apply\n\n    async.parallel([\n        async.apply(fs.writeFile, \'testfile1\', \'test1\'),\n        async.apply(fs.writeFile, \'testfile2\', \'test2\'),\n    ]);\n\n\n    // the same process without using apply\n\n    async.parallel([\n        function(callback){\n            fs.writeFile(\'testfile1\', \'test1\', callback);\n        },\n        function(callback){\n            fs.writeFile(\'testfile2\', \'test2\', callback);\n        },\n    ]);\n\nIt\'s possible to pass any number of additional arguments when calling the\ncontinuation:\n\n    node> var fn = async.apply(sys.puts, \'one\');\n    node> fn(\'two\', \'three\');\n    one\n    two\n    three\n\n---------------------------------------\n\n<a name="nextTick" />\n### nextTick(callback)\n\nCalls the callback on a later loop around the event loop. In node.js this just\ncalls process.nextTick, in the browser it falls back to setTimeout(callback, 0),\nwhich means other higher priority events may precede the execution of the callback.\n\nThis is used internally for browser-compatibility purposes.\n\n__Arguments__\n\n* callback - The function to call on a later loop around the event loop.\n\n__Example__\n\n    var call_order = [];\n    async.nextTick(function(){\n        call_order.push(\'two\');\n        // call_order now equals [\'one\',\'two]\n    });\n    call_order.push(\'one\')\n\n\n## Utils\n\n<a name="memoize" />\n### memoize(fn, [hasher])\n\nCaches the results of an async function. When creating a hash to store function\nresults against, the callback is omitted from the hash and an optional hash\nfunction can be used.\n\n__Arguments__\n\n* fn - the function you to proxy and cache results from.\n* hasher - an optional function for generating a custom hash for storing\n  results, it has all the arguments applied to it apart from the callback, and\n  must be synchronous.\n\n__Example__\n\n    var slow_fn = function (name, callback) {\n        // do something\n        callback(null, result);\n    };\n    var fn = async.memoize(slow_fn);\n\n    // fn can now be used as if it were slow_fn\n    fn(\'some name\', function () {\n        // callback\n    });\n\n<a name="unmemoize" />\n### unmemoize(fn)\n\nUndoes a memoized function, reverting it to the original, unmemoized\nform. Comes handy in tests.\n\n__Arguments__\n\n* fn - the memoized function\n\n<a name="log" />\n### log(function, arguments)\n\nLogs the result of an async function to the console. Only works in node.js or\nin browsers that support console.log and console.error (such as FF and Chrome).\nIf multiple arguments are returned from the async function, console.log is\ncalled on each argument in order.\n\n__Arguments__\n\n* function - The function you want to eventually apply all arguments to.\n* arguments... - Any number of arguments to apply to the function.\n\n__Example__\n\n    var hello = function(name, callback){\n        setTimeout(function(){\n            callback(null, \'hello \' + name);\n        }, 1000);\n    };\n\n    node> async.log(hello, \'world\');\n    \'hello world\'\n\n\n---------------------------------------\n\n<a name="dir" />\n### dir(function, arguments)\n\nLogs the result of an async function to the console using console.dir to\ndisplay the properties of the resulting object. Only works in node.js or\nin browsers that support console.dir and console.error (such as FF and Chrome).\nIf multiple arguments are returned from the async function, console.dir is\ncalled on each argument in order.\n\n__Arguments__\n\n* function - The function you want to eventually apply all arguments to.\n* arguments... - Any number of arguments to apply to the function.\n\n__Example__\n\n    var hello = function(name, callback){\n        setTimeout(function(){\n            callback(null, {hello: name});\n        }, 1000);\n    };\n\n    node> async.dir(hello, \'world\');\n    {hello: \'world\'}\n\n\n---------------------------------------\n\n<a name="noConflict" />\n### noConflict()\n\nChanges the value of async back to its original value, returning a reference to the\nasync object.\n',
+191 silly resolved     readmeFilename: 'README.md',
+191 silly resolved     _id: 'async@0.1.18',
+191 silly resolved     _from: 'async@0.1.18' },
+191 silly resolved   { name: 'optimist',
+191 silly resolved     version: '0.3.7',
+191 silly resolved     description: 'Light-weight option parsing with an argv hash. No optstrings attached.',
+191 silly resolved     main: './index.js',
+191 silly resolved     dependencies: { wordwrap: '~0.0.2' },
+191 silly resolved     devDependencies: { hashish: '~0.0.4', tap: '~0.4.0' },
+191 silly resolved     scripts: { test: 'tap ./test/*.js' },
+191 silly resolved     repository:
+191 silly resolved      { type: 'git',
+191 silly resolved        url: 'http://github.com/substack/node-optimist.git' },
+191 silly resolved     keywords:
+191 silly resolved      [ 'argument',
+191 silly resolved        'args',
+191 silly resolved        'option',
+191 silly resolved        'parser',
+191 silly resolved        'parsing',
+191 silly resolved        'cli',
+191 silly resolved        'command' ],
+191 silly resolved     author:
+191 silly resolved      { name: 'James Halliday',
+191 silly resolved        email: 'mail@substack.net',
+191 silly resolved        url: 'http://substack.net' },
+191 silly resolved     license: 'MIT/X11',
+191 silly resolved     engine: { node: '>=0.4' },
+191 silly resolved     readme: 'optimist\n========\n\nOptimist is a node.js library for option parsing for people who hate option\nparsing. More specifically, this module is for people who like all the --bells\nand -whistlz of program usage but think optstrings are a waste of time.\n\nWith optimist, option parsing doesn\'t have to suck (as much).\n\n[![build status](https://secure.travis-ci.org/substack/node-optimist.png)](http://travis-ci.org/substack/node-optimist)\n\nexamples\n========\n\nWith Optimist, the options are just a hash! No optstrings attached.\n-------------------------------------------------------------------\n\nxup.js:\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\').argv;\n\nif (argv.rif - 5 * argv.xup > 7.138) {\n    console.log(\'Buy more riffiwobbles\');\n}\nelse {\n    console.log(\'Sell the xupptumblers\');\n}\n````\n\n***\n\n    $ ./xup.js --rif=55 --xup=9.52\n    Buy more riffiwobbles\n    \n    $ ./xup.js --rif 12 --xup 8.1\n    Sell the xupptumblers\n\n![This one\'s optimistic.](http://substack.net/images/optimistic.png)\n\nBut wait! There\'s more! You can do short options:\n-------------------------------------------------\n \nshort.js:\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\').argv;\nconsole.log(\'(%d,%d)\', argv.x, argv.y);\n````\n\n***\n\n    $ ./short.js -x 10 -y 21\n    (10,21)\n\nAnd booleans, both long and short (and grouped):\n----------------------------------\n\nbool.js:\n\n````javascript\n#!/usr/bin/env node\nvar util = require(\'util\');\nvar argv = require(\'optimist\').argv;\n\nif (argv.s) {\n    util.print(argv.fr ? \'Le chat dit: \' : \'The cat says: \');\n}\nconsole.log(\n    (argv.fr ? \'miaou\' : \'meow\') + (argv.p ? \'.\' : \'\')\n);\n````\n\n***\n\n    $ ./bool.js -s\n    The cat says: meow\n    \n    $ ./bool.js -sp\n    The cat says: meow.\n\n    $ ./bool.js -sp --fr\n    Le chat dit: miaou.\n\nAnd non-hypenated options too! Just use `argv._`!\n-------------------------------------------------\n \nnonopt.js:\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\').argv;\nconsole.log(\'(%d,%d)\', argv.x, argv.y);\nconsole.log(argv._);\n````\n\n***\n\n    $ ./nonopt.js -x 6.82 -y 3.35 moo\n    (6.82,3.35)\n    [ \'moo\' ]\n    \n    $ ./nonopt.js foo -x 0.54 bar -y 1.12 baz\n    (0.54,1.12)\n    [ \'foo\', \'bar\', \'baz\' ]\n\nPlus, Optimist comes with .usage() and .demand()!\n-------------------------------------------------\n\ndivide.js:\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\')\n    .usage(\'Usage: $0 -x [num] -y [num]\')\n    .demand([\'x\',\'y\'])\n    .argv;\n\nconsole.log(argv.x / argv.y);\n````\n\n***\n \n    $ ./divide.js -x 55 -y 11\n    5\n    \n    $ node ./divide.js -x 4.91 -z 2.51\n    Usage: node ./divide.js -x [num] -y [num]\n\n    Options:\n      -x  [required]\n      -y  [required]\n\n    Missing required arguments: y\n\nEVEN MORE HOLY COW\n------------------\n\ndefault_singles.js:\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\')\n    .default(\'x\', 10)\n    .default(\'y\', 10)\n    .argv\n;\nconsole.log(argv.x + argv.y);\n````\n\n***\n\n    $ ./default_singles.js -x 5\n    15\n\ndefault_hash.js:\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\')\n    .default({ x : 10, y : 10 })\n    .argv\n;\nconsole.log(argv.x + argv.y);\n````\n\n***\n\n    $ ./default_hash.js -y 7\n    17\n\nAnd if you really want to get all descriptive about it...\n---------------------------------------------------------\n\nboolean_single.js\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\')\n    .boolean(\'v\')\n    .argv\n;\nconsole.dir(argv);\n````\n\n***\n\n    $ ./boolean_single.js -v foo bar baz\n    true\n    [ \'bar\', \'baz\', \'foo\' ]\n\nboolean_double.js\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\')\n    .boolean([\'x\',\'y\',\'z\'])\n    .argv\n;\nconsole.dir([ argv.x, argv.y, argv.z ]);\nconsole.dir(argv._);\n````\n\n***\n\n    $ ./boolean_double.js -x -z one two three\n    [ true, false, true ]\n    [ \'one\', \'two\', \'three\' ]\n\nOptimist is here to help...\n---------------------------\n\nYou can describe parameters for help messages and set aliases. Optimist figures\nout how to format a handy help string automatically.\n\nline_count.js\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\')\n    .usage(\'Count the lines in a file.\\nUsage: $0\')\n    .demand(\'f\')\n    .alias(\'f\', \'file\')\n    .describe(\'f\', \'Load a file\')\n    .argv\n;\n\nvar fs = require(\'fs\');\nvar s = fs.createReadStream(argv.file);\n\nvar lines = 0;\ns.on(\'data\', function (buf) {\n    lines += buf.toString().match(/\\n/g).length;\n});\n\ns.on(\'end\', function () {\n    console.log(lines);\n});\n````\n\n***\n\n    $ node line_count.js\n    Count the lines in a file.\n    Usage: node ./line_count.js\n\n    Options:\n      -f, --file  Load a file  [required]\n\n    Missing required arguments: f\n\n    $ node line_count.js --file line_count.js \n    20\n    \n    $ node line_count.js -f line_count.js \n    20\n\nmethods\n=======\n\nBy itself,\n\n````javascript\nrequire(\'optimist\').argv\n`````\n\nwill use `process.argv` array to construct the `argv` object.\n\nYou can pass in the `process.argv` yourself:\n\n````javascript\nrequire(\'optimist\')([ \'-x\', \'1\', \'-y\', \'2\' ]).argv\n````\n\nor use .parse() to do the same thing:\n\n````javascript\nrequire(\'optimist\').parse([ \'-x\', \'1\', \'-y\', \'2\' ])\n````\n\nThe rest of these methods below come in just before the terminating `.argv`.\n\n.alias(key, alias)\n------------------\n\nSet key names as equivalent such that updates to a key will propagate to aliases\nand vice-versa.\n\nOptionally `.alias()` can take an object that maps keys to aliases.\n\n.default(key, value)\n--------------------\n\nSet `argv[key]` to `value` if no option was specified on `process.argv`.\n\nOptionally `.default()` can take an object that maps keys to default values.\n\n.demand(key)\n------------\n\nIf `key` is a string, show the usage information and exit if `key` wasn\'t\nspecified in `process.argv`.\n\nIf `key` is a number, demand at least as many non-option arguments, which show\nup in `argv._`.\n\nIf `key` is an Array, demand each element.\n\n.describe(key, desc)\n--------------------\n\nDescribe a `key` for the generated usage information.\n\nOptionally `.describe()` can take an object that maps keys to descriptions.\n\n.options(key, opt)\n------------------\n\nInstead of chaining together `.alias().demand().default()`, you can specify\nkeys in `opt` for each of the chainable methods.\n\nFor example:\n\n````javascript\nvar argv = require(\'optimist\')\n    .options(\'f\', {\n        alias : \'file\',\n        default : \'/etc/passwd\',\n    })\n    .argv\n;\n````\n\nis the same as\n\n````javascript\nvar argv = require(\'optimist\')\n    .alias(\'f\', \'file\')\n    .default(\'f\', \'/etc/passwd\')\n    .argv\n;\n````\n\nOptionally `.options()` can take an object that maps keys to `opt` parameters.\n\n.usage(message)\n---------------\n\nSet a usage message to show which commands to use. Inside `message`, the string\n`$0` will get interpolated to the current script name or node command for the\npresent script similar to how `$0` works in bash or perl.\n\n.check(fn)\n----------\n\nCheck that certain conditions are met in the provided arguments.\n\nIf `fn` throws or returns `false`, show the thrown error, usage information, and\nexit.\n\n.boolean(key)\n-------------\n\nInterpret `key` as a boolean. If a non-flag option follows `key` in\n`process.argv`, that string won\'t get set as the value of `key`.\n\nIf `key` never shows up as a flag in `process.arguments`, `argv[key]` will be\n`false`.\n\nIf `key` is an Array, interpret all the elements as booleans.\n\n.string(key)\n------------\n\nTell the parser logic not to interpret `key` as a number or boolean.\nThis can be useful if you need to preserve leading zeros in an input.\n\nIf `key` is an Array, interpret all the elements as strings.\n\n.wrap(columns)\n--------------\n\nFormat usage output to wrap at `columns` many columns.\n\n.help()\n-------\n\nReturn the generated usage string.\n\n.showHelp(fn=console.error)\n---------------------------\n\nPrint the usage data using `fn` for printing.\n\n.parse(args)\n------------\n\nParse `args` instead of `process.argv`. Returns the `argv` object.\n\n.argv\n-----\n\nGet the arguments as a plain old object.\n\nArguments without a corresponding flag show up in the `argv._` array.\n\nThe script name or node command is available at `argv.$0` similarly to how `$0`\nworks in bash or perl.\n\nparsing tricks\n==============\n\nstop parsing\n------------\n\nUse `--` to stop parsing flags and stuff the remainder into `argv._`.\n\n    $ node examples/reflect.js -a 1 -b 2 -- -c 3 -d 4\n    { _: [ \'-c\', \'3\', \'-d\', \'4\' ],\n      \'$0\': \'node ./examples/reflect.js\',\n      a: 1,\n      b: 2 }\n\nnegate fields\n-------------\n\nIf you want to explicity set a field to false instead of just leaving it\nundefined or to override a default you can do `--no-key`.\n\n    $ node examples/reflect.js -a --no-b\n    { _: [],\n      \'$0\': \'node ./examples/reflect.js\',\n      a: true,\n      b: false }\n\nnumbers\n-------\n\nEvery argument that looks like a number (`!isNaN(Number(arg))`) is converted to\none. This way you can just `net.createConnection(argv.port)` and you can add\nnumbers out of `argv` with `+` without having that mean concatenation,\nwhich is super frustrating.\n\nduplicates\n----------\n\nIf you specify a flag multiple times it will get turned into an array containing\nall the values in order.\n\n    $ node examples/reflect.js -x 5 -x 8 -x 0\n    { _: [],\n      \'$0\': \'node ./examples/reflect.js\',\n        x: [ 5, 8, 0 ] }\n\ndot notation\n------------\n\nWhen you use dots (`.`s) in argument names, an implicit object path is assumed.\nThis lets you organize arguments into nested objects.\n\n     $ node examples/reflect.js --foo.bar.baz=33 --foo.quux=5\n     { _: [],\n       \'$0\': \'node ./examples/reflect.js\',\n         foo: { bar: { baz: 33 }, quux: 5 } }\n\ninstallation\n============\n\nWith [npm](http://github.com/isaacs/npm), just do:\n    npm install optimist\n \nor clone this project on github:\n\n    git clone http://github.com/substack/node-optimist.git\n\nTo run the tests with [expresso](http://github.com/visionmedia/expresso),\njust do:\n    \n    expresso\n\ninspired By\n===========\n\nThis module is loosely inspired by Perl\'s\n[Getopt::Casual](http://search.cpan.org/~photo/Getopt-Casual-0.13.1/Casual.pm).\n',
+191 silly resolved     readmeFilename: 'readme.markdown',
+191 silly resolved     _id: 'optimist@0.3.7',
+191 silly resolved     _from: 'optimist@~0.3.4' },
+191 silly resolved   { name: 'sf',
+191 silly resolved     description: 'String formatting library for node.js',
+191 silly resolved     author: { name: 'Joe Ferner', email: 'joe.ferner@nearinfinity.com' },
+191 silly resolved     keywords: [ 'string', 'format', 'template' ],
+191 silly resolved     version: '0.1.3',
+191 silly resolved     engines: { node: '>=0.6.0' },
+191 silly resolved     maintainers: [ [Object] ],
+191 silly resolved     bugs: { url: 'https://github.com/nearinfinity/node-sf/issues' },
+191 silly resolved     license: 'MIT',
+191 silly resolved     repository:
+191 silly resolved      { type: 'git',
+191 silly resolved        url: 'https://github.com/nearinfinity/node-sf.git' },
+191 silly resolved     devDependencies: { nodeunit: '~0.7.3' },
+191 silly resolved     scripts: { test: 'nodeunit test' },
+191 silly resolved     main: './index.js',
+191 silly resolved     readme: '# sf\n\nString formatting library for node.js.\n\n## Installation\n\n```bash\n$ npm install sf\n```\n\n## Quick Examples\n\n```javascript\nvar sf = require("sf");\n\nsf("{who} has a {what}", { who: \'dog\', what: \'tail\' });\n// returns: dog has a tail\n\nsf("{0} has a {1}", \'dog\', \'tail\');\n// returns: dog has a tail\n\nsf("{0:#,##0.00}", 2123.1);\n// returns: 2,123.10\n\nsf("{0,15:#,##0.00}", 2123.1);\n// returns:        2,123.10\n\nsf("{a.b}", { a: { b: \'test\' }});\n// returns: test\n\nsf("{a.z.c}", { a: { b: \'test\' }});\n// throws an error\n\nsf("{a.?z.?c}", { a: { b: \'test\' }});\n// returns:\n\nsf("{a[0]}", { a: [ \'foo\', \'bar\' ]});\n// returns: foo\n\nsf("{a[-1]}", { a: [ \'foo\', \'bar\' ]});\n// returns: bar\n\nsf.log("{who} has a {what}", { who: \'dog\', what: \'tail\' });\n// outputs to standard out: dog has a tail\n```\n\n## Format Specifiers\n\nThe format is similar to C#\'s string.format. The text inside the curly braces is {indexOrName[,alignment][:formatString]}.\nIf alignment is positive the text is right aligned. If alignment is negative it will be left aligned.\n\n### Object\n\n| Specifier | Name                         |\n|-----------|------------------------------|\n| json      | JSON.stringify               |\n| inspect   | util.inspect                 |\n\n### Numbers\n\n| Specifier | Name                         | Example          | Output         |\n|-----------|------------------------------|------------------|----------------|\n| 0         | Zero placeholder             | {0:00.0000}      | 02.1200        |\n| #         | Digit placeholder            | {0:#,###}        | 1,234          |\n| x         | Lowercase hex                | {0:x4}           | 01fc           |\n| X         | Uppercase hex                | {0:X4}           | 01FC           |\n\n### Dates\n\n| Specifier | Name                            | Example                         |\n|-----------|---------------------------------|---------------------------------|\n| sd        | Short date                      | 10/12/2002                      |\n| D         | Long date                       | December 10, 2002               |\n| t         | Short time                      | 10:11 PM                        |\n| T         | Long time                       | 10:11:29 PM                     |\n| fdt       | Full date & time                | December 10, 2002 10:11 PM      |\n| F         | Full date & time (long)         | December 10, 2002 10:11:29 PM   |\n| g         | Default date & time             | 10/12/2002 10:11 PM             |\n| G         | Default date & time (long)      | 10/12/2002 10:11:29 PM          |\n| md        | Month day pattern               | December 10                     |\n| r         | RFC1123 date string             | Tue, 10 Dec 2002 22:11:29 +0500 |\n| s         | Sortable date string            | 2002-12-10T22:11:29             |\n| d         | Date single digit               | 1                               |\n| dd        | Date leading zero               | 01                              |\n| ddd       | Short day name                  | Mon                             |\n| dddd      | Long day name                   | Monday                          |\n| f         | Fraction of second (1 digit)    | 1                               |\n| ff        | Fraction of second (2 digit)    | 24                              |\n| fff       | Fraction of second (3 digit)    | 345                             |\n| h         | Hour 12-hour format 1 digit     | 5                               |\n| hh        | Hour 12-hour format 2 digits    | 05                              |\n| H         | Hour 24-hour format 1 digit     | 5                               |\n| HH        | Hour 24-hour format 2 digits    | 05                              |\n| mm        | Minutes 2 digits                | 23                              |\n| M         | Month single digit              | 2                               |\n| MM        | Month leading zero              | 02                              |\n| MMM       | Month short name                | Feb                             |\n| MMMM      | Month long name                 | February                        |\n| ss        | Seconds 2 digits                | 54                              |\n| tt        | AM/PM                           | AM                              |\n| yy        | Year 2 digits                   | 12                              |\n| yyyy      | Year 4 digits                   | 2012                            |\n| zz        | Time zone offset                | 05                              |\n| +zz       | Time zone offset leading +      | +05                             |\n| zzz       | Time zone offset full           | 05:00                           |\n| zzzz      | Time zone offset full           | 0500                            |\n| +zzzz     | Time zone offset full leading + | +0500                           |\n\n## Helper Functions\n\n * sf.log(formatString [, args...]);\n * sf.info(formatString [, args...]);\n * sf.warn(formatString [, args...]);\n * sf.error(formatString [, args...]);\n',
+191 silly resolved     readmeFilename: 'README.md',
+191 silly resolved     _id: 'sf@0.1.3',
+191 silly resolved     _from: 'sf@0.1.3' } ]
+192 info install bindings@0.3.0 into C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2
+193 info install async@0.1.18 into C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2
+194 info install optimist@0.3.7 into C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2
+195 info install sf@0.1.3 into C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2
+196 info installOne bindings@0.3.0
+197 info installOne async@0.1.18
+198 info installOne optimist@0.3.7
+199 info installOne sf@0.1.3
+200 verbose from cache C:\Users\ebouvetdit\AppData\Roaming\npm-cache\bindings\0.3.0\package\package.json
+201 info C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\bindings unbuild
+202 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\bindings\package.json
+203 verbose from cache C:\Users\ebouvetdit\AppData\Roaming\npm-cache\async\0.1.18\package\package.json
+204 info C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\async unbuild
+205 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\async\package.json
+206 verbose from cache C:\Users\ebouvetdit\AppData\Roaming\npm-cache\optimist\0.3.7\package\package.json
+207 info C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist unbuild
+208 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\package.json
+209 verbose from cache C:\Users\ebouvetdit\AppData\Roaming\npm-cache\sf\0.1.3\package\package.json
+210 info C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\sf unbuild
+211 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\sf\package.json
+212 verbose tar unpack C:\Users\ebouvetdit\AppData\Roaming\npm-cache\bindings\0.3.0\package.tgz
+213 silly lockFile e51415dc-erialport2-node-modules-bindings C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\bindings
+214 verbose lock C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\bindings C:\Users\ebouvetdit\AppData\Roaming\npm-cache\e51415dc-erialport2-node-modules-bindings.lock
+215 silly lockFile 556713db-cache-bindings-0-3-0-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\bindings\0.3.0\package.tgz
+216 verbose lock C:\Users\ebouvetdit\AppData\Roaming\npm-cache\bindings\0.3.0\package.tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\556713db-cache-bindings-0-3-0-package-tgz.lock
+217 verbose tar unpack C:\Users\ebouvetdit\AppData\Roaming\npm-cache\async\0.1.18\package.tgz
+218 silly lockFile 0ab541f3-s-serialport2-node-modules-async C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\async
+219 verbose lock C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\async C:\Users\ebouvetdit\AppData\Roaming\npm-cache\0ab541f3-s-serialport2-node-modules-async.lock
+220 silly lockFile 8a677afc-m-cache-async-0-1-18-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\async\0.1.18\package.tgz
+221 verbose lock C:\Users\ebouvetdit\AppData\Roaming\npm-cache\async\0.1.18\package.tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\8a677afc-m-cache-async-0-1-18-package-tgz.lock
+222 verbose tar unpack C:\Users\ebouvetdit\AppData\Roaming\npm-cache\optimist\0.3.7\package.tgz
+223 silly lockFile 3e107199-erialport2-node-modules-optimist C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist
+224 verbose lock C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist C:\Users\ebouvetdit\AppData\Roaming\npm-cache\3e107199-erialport2-node-modules-optimist.lock
+225 silly lockFile 7bb4151c-cache-optimist-0-3-7-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\optimist\0.3.7\package.tgz
+226 verbose lock C:\Users\ebouvetdit\AppData\Roaming\npm-cache\optimist\0.3.7\package.tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\7bb4151c-cache-optimist-0-3-7-package-tgz.lock
+227 verbose tar unpack C:\Users\ebouvetdit\AppData\Roaming\npm-cache\sf\0.1.3\package.tgz
+228 silly lockFile 66e9c220-ules-serialport2-node-modules-sf C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\sf
+229 verbose lock C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\sf C:\Users\ebouvetdit\AppData\Roaming\npm-cache\66e9c220-ules-serialport2-node-modules-sf.lock
+230 silly lockFile 3b0d7da3-g-npm-cache-sf-0-1-3-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\sf\0.1.3\package.tgz
+231 verbose lock C:\Users\ebouvetdit\AppData\Roaming\npm-cache\sf\0.1.3\package.tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\3b0d7da3-g-npm-cache-sf-0-1-3-package-tgz.lock
+232 silly gunzTarPerm modes [ '755', '644' ]
+233 silly gunzTarPerm modes [ '755', '644' ]
+234 silly gunzTarPerm modes [ '755', '644' ]
+235 silly gunzTarPerm modes [ '755', '644' ]
+236 silly gunzTarPerm extractEntry package.json
+237 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+238 silly gunzTarPerm extractEntry README.md
+239 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+240 silly gunzTarPerm extractEntry bindings.js
+241 silly gunzTarPerm modified mode [ 'bindings.js', 438, 420 ]
+242 silly gunzTarPerm extractEntry package.json
+243 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+244 silly gunzTarPerm extractEntry package.json
+245 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+246 silly gunzTarPerm extractEntry LICENSE
+247 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+248 silly gunzTarPerm extractEntry index.js
+249 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+250 silly gunzTarPerm extractEntry package.json
+251 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+252 silly gunzTarPerm extractEntry .npmignore
+253 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+254 silly gunzTarPerm extractEntry README.md
+255 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+256 silly gunzTarPerm extractEntry .npmignore
+257 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+258 silly gunzTarPerm extractEntry README.md
+259 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+260 silly gunzTarPerm extractEntry .travis.yml
+261 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+262 silly gunzTarPerm extractEntry LICENSE
+263 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+264 silly gunzTarPerm extractEntry index.js
+265 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+266 silly gunzTarPerm extractEntry lib/stringFormat.js
+267 silly gunzTarPerm modified mode [ 'lib/stringFormat.js', 438, 420 ]
+268 silly gunzTarPerm extractEntry example/bool.js
+269 silly gunzTarPerm modified mode [ 'example/bool.js', 438, 420 ]
+270 silly gunzTarPerm extractEntry example/default_singles.js
+271 silly gunzTarPerm modified mode [ 'example/default_singles.js', 438, 420 ]
+272 silly gunzTarPerm extractEntry index.js
+273 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+274 silly gunzTarPerm extractEntry .gitmodules
+275 silly gunzTarPerm modified mode [ '.gitmodules', 438, 420 ]
+276 silly gunzTarPerm extractEntry test/indentTest.js
+277 silly gunzTarPerm modified mode [ 'test/indentTest.js', 438, 420 ]
+278 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\bindings\package.json
+279 silly lockFile e51415dc-erialport2-node-modules-bindings C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\bindings
+280 silly lockFile e51415dc-erialport2-node-modules-bindings C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\bindings
+281 silly lockFile 556713db-cache-bindings-0-3-0-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\bindings\0.3.0\package.tgz
+282 silly lockFile 556713db-cache-bindings-0-3-0-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\bindings\0.3.0\package.tgz
+283 silly gunzTarPerm extractEntry test/stringFormatTest.js
+284 silly gunzTarPerm modified mode [ 'test/stringFormatTest.js', 438, 420 ]
+285 info preinstall bindings@0.3.0
+286 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\bindings\package.json
+287 verbose readDependencies using package.json deps
+288 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\bindings\package.json
+289 verbose readDependencies using package.json deps
+290 silly resolved []
+291 verbose about to build C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\bindings
+292 info build C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\bindings
+293 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\bindings\package.json
+294 verbose linkStuff [ false,
+294 verbose linkStuff   false,
+294 verbose linkStuff   false,
+294 verbose linkStuff   'C:\\Users\\ebouvetdit\\Documents\\Projet\\node_modules\\serialport2\\node_modules' ]
+295 info linkStuff bindings@0.3.0
+296 verbose linkBins bindings@0.3.0
+297 verbose linkMans bindings@0.3.0
+298 verbose rebuildBundles bindings@0.3.0
+299 info install bindings@0.3.0
+300 silly gunzTarPerm extractEntry example/divide.js
+301 silly gunzTarPerm modified mode [ 'example/divide.js', 438, 420 ]
+302 silly gunzTarPerm extractEntry example/line_count.js
+303 silly gunzTarPerm modified mode [ 'example/line_count.js', 438, 420 ]
+304 info postinstall bindings@0.3.0
+305 silly gunzTarPerm extractEntry example/default_hash.js
+306 silly gunzTarPerm modified mode [ 'example/default_hash.js', 438, 420 ]
+307 silly gunzTarPerm extractEntry example/line_count_wrap.js
+308 silly gunzTarPerm modified mode [ 'example/line_count_wrap.js', 438, 420 ]
+309 silly gunzTarPerm extractEntry example/nonopt.js
+310 silly gunzTarPerm modified mode [ 'example/nonopt.js', 438, 420 ]
+311 silly gunzTarPerm extractEntry example/reflect.js
+312 silly gunzTarPerm modified mode [ 'example/reflect.js', 438, 420 ]
+313 silly gunzTarPerm extractEntry example/short.js
+314 silly gunzTarPerm modified mode [ 'example/short.js', 438, 420 ]
+315 silly gunzTarPerm extractEntry example/string.js
+316 silly gunzTarPerm modified mode [ 'example/string.js', 438, 420 ]
+317 silly gunzTarPerm extractEntry lib/async.js
+318 silly gunzTarPerm modified mode [ 'lib/async.js', 438, 420 ]
+319 silly gunzTarPerm extractEntry Makefile
+320 silly gunzTarPerm modified mode [ 'Makefile', 438, 420 ]
+321 silly gunzTarPerm extractEntry example/boolean_single.js
+322 silly gunzTarPerm modified mode [ 'example/boolean_single.js', 438, 420 ]
+323 silly gunzTarPerm extractEntry example/usage-options.js
+324 silly gunzTarPerm modified mode [ 'example/usage-options.js', 438, 420 ]
+325 silly gunzTarPerm extractEntry example/boolean_double.js
+326 silly gunzTarPerm modified mode [ 'example/boolean_double.js', 438, 420 ]
+327 silly gunzTarPerm extractEntry example/xup.js
+328 silly gunzTarPerm modified mode [ 'example/xup.js', 438, 420 ]
+329 silly gunzTarPerm extractEntry example/line_count_options.js
+330 silly gunzTarPerm modified mode [ 'example/line_count_options.js', 438, 420 ]
+331 silly gunzTarPerm extractEntry readme.markdown
+332 silly gunzTarPerm modified mode [ 'readme.markdown', 438, 420 ]
+333 silly gunzTarPerm extractEntry test/parse.js
+334 silly gunzTarPerm modified mode [ 'test/parse.js', 438, 420 ]
+335 silly gunzTarPerm extractEntry test/usage.js
+336 silly gunzTarPerm modified mode [ 'test/usage.js', 438, 420 ]
+337 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\sf\package.json
+338 silly lockFile 66e9c220-ules-serialport2-node-modules-sf C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\sf
+339 silly lockFile 66e9c220-ules-serialport2-node-modules-sf C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\sf
+340 silly gunzTarPerm extractEntry test/_.js
+341 silly gunzTarPerm modified mode [ 'test/_.js', 438, 420 ]
+342 silly gunzTarPerm extractEntry test/_/argv.js
+343 silly gunzTarPerm modified mode [ 'test/_/argv.js', 438, 420 ]
+344 silly lockFile 3b0d7da3-g-npm-cache-sf-0-1-3-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\sf\0.1.3\package.tgz
+345 silly lockFile 3b0d7da3-g-npm-cache-sf-0-1-3-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\sf\0.1.3\package.tgz
+346 info preinstall sf@0.1.3
+347 silly gunzTarPerm extractEntry test/_/bin.js
+348 silly gunzTarPerm modified mode [ 'test/_/bin.js', 438, 420 ]
+349 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\sf\package.json
+350 verbose readDependencies using package.json deps
+351 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\sf\package.json
+352 verbose readDependencies using package.json deps
+353 silly resolved []
+354 verbose about to build C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\sf
+355 info build C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\sf
+356 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\sf\package.json
+357 verbose linkStuff [ false,
+357 verbose linkStuff   false,
+357 verbose linkStuff   false,
+357 verbose linkStuff   'C:\\Users\\ebouvetdit\\Documents\\Projet\\node_modules\\serialport2\\node_modules' ]
+358 info linkStuff sf@0.1.3
+359 verbose linkBins sf@0.1.3
+360 verbose linkMans sf@0.1.3
+361 verbose rebuildBundles sf@0.1.3
+362 info install sf@0.1.3
+363 info postinstall sf@0.1.3
+364 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\async\package.json
+365 silly lockFile 0ab541f3-s-serialport2-node-modules-async C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\async
+366 silly lockFile 0ab541f3-s-serialport2-node-modules-async C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\async
+367 silly lockFile 8a677afc-m-cache-async-0-1-18-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\async\0.1.18\package.tgz
+368 silly lockFile 8a677afc-m-cache-async-0-1-18-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\async\0.1.18\package.tgz
+369 info preinstall async@0.1.18
+370 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\async\package.json
+371 verbose readDependencies using package.json deps
+372 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\async\package.json
+373 verbose readDependencies using package.json deps
+374 silly resolved []
+375 verbose about to build C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\async
+376 info build C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\async
+377 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\async\package.json
+378 verbose linkStuff [ false,
+378 verbose linkStuff   false,
+378 verbose linkStuff   false,
+378 verbose linkStuff   'C:\\Users\\ebouvetdit\\Documents\\Projet\\node_modules\\serialport2\\node_modules' ]
+379 info linkStuff async@0.1.18
+380 verbose linkBins async@0.1.18
+381 verbose linkMans async@0.1.18
+382 verbose rebuildBundles async@0.1.18
+383 info install async@0.1.18
+384 info postinstall async@0.1.18
+385 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\package.json
+386 silly lockFile 3e107199-erialport2-node-modules-optimist C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist
+387 silly lockFile 3e107199-erialport2-node-modules-optimist C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist
+388 silly lockFile 7bb4151c-cache-optimist-0-3-7-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\optimist\0.3.7\package.tgz
+389 silly lockFile 7bb4151c-cache-optimist-0-3-7-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\optimist\0.3.7\package.tgz
+390 info preinstall optimist@0.3.7
+391 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\package.json
+392 verbose readDependencies using package.json deps
+393 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\package.json
+394 verbose readDependencies using package.json deps
+395 verbose cache add [ 'wordwrap@~0.0.2', null ]
+396 verbose cache add name=undefined spec="wordwrap@~0.0.2" args=["wordwrap@~0.0.2",null]
+397 verbose parsed url { protocol: null,
+397 verbose parsed url   slashes: null,
+397 verbose parsed url   auth: null,
+397 verbose parsed url   host: null,
+397 verbose parsed url   port: null,
+397 verbose parsed url   hostname: null,
+397 verbose parsed url   hash: null,
+397 verbose parsed url   search: null,
+397 verbose parsed url   query: null,
+397 verbose parsed url   pathname: 'wordwrap@~0.0.2',
+397 verbose parsed url   path: 'wordwrap@~0.0.2',
+397 verbose parsed url   href: 'wordwrap@~0.0.2' }
+398 verbose cache add name="wordwrap" spec="~0.0.2" args=["wordwrap","~0.0.2"]
+399 verbose parsed url { protocol: null,
+399 verbose parsed url   slashes: null,
+399 verbose parsed url   auth: null,
+399 verbose parsed url   host: null,
+399 verbose parsed url   port: null,
+399 verbose parsed url   hostname: null,
+399 verbose parsed url   hash: null,
+399 verbose parsed url   search: null,
+399 verbose parsed url   query: null,
+399 verbose parsed url   pathname: '~0.0.2',
+399 verbose parsed url   path: '~0.0.2',
+399 verbose parsed url   href: '~0.0.2' }
+400 verbose addNamed [ 'wordwrap', '~0.0.2' ]
+401 verbose addNamed [ null, '>=0.0.2- <0.1.0-' ]
+402 silly lockFile 8bd42136-wordwrap-0-0-2 wordwrap@~0.0.2
+403 verbose lock wordwrap@~0.0.2 C:\Users\ebouvetdit\AppData\Roaming\npm-cache\8bd42136-wordwrap-0-0-2.lock
+404 silly addNameRange { name: 'wordwrap', range: '>=0.0.2- <0.1.0-', hasData: false }
+405 verbose url raw wordwrap
+406 verbose url resolving [ 'https://registry.npmjs.org/', './wordwrap' ]
+407 verbose url resolved https://registry.npmjs.org/wordwrap
+408 info trying registry request attempt 1 at 11:29:32
+409 verbose etag "9I9K7B0GAZT5VHGDP1S8AL0VV"
+410 http GET https://registry.npmjs.org/wordwrap
+411 http 304 https://registry.npmjs.org/wordwrap
+412 silly registry.get cb [ 304,
+412 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+412 silly registry.get     etag: '"9I9K7B0GAZT5VHGDP1S8AL0VV"',
+412 silly registry.get     date: 'Wed, 03 Jul 2013 09:29:33 GMT',
+412 silly registry.get     'content-length': '0' } ]
+413 verbose etag wordwrap from cache
+414 silly addNameRange number 2 { name: 'wordwrap', range: '>=0.0.2- <0.1.0-', hasData: true }
+415 silly addNameRange versions [ 'wordwrap', [ '0.0.1', '0.0.2' ] ]
+416 verbose addNamed [ 'wordwrap', '0.0.2' ]
+417 verbose addNamed [ '0.0.2', '0.0.2' ]
+418 silly lockFile 24a694c8-wordwrap-0-0-2 wordwrap@0.0.2
+419 verbose lock wordwrap@0.0.2 C:\Users\ebouvetdit\AppData\Roaming\npm-cache\24a694c8-wordwrap-0-0-2.lock
+420 verbose read json C:\Users\ebouvetdit\AppData\Roaming\npm-cache\wordwrap\0.0.2\package\package.json
+421 silly lockFile 24a694c8-wordwrap-0-0-2 wordwrap@0.0.2
+422 silly lockFile 24a694c8-wordwrap-0-0-2 wordwrap@0.0.2
+423 silly lockFile 8bd42136-wordwrap-0-0-2 wordwrap@~0.0.2
+424 silly lockFile 8bd42136-wordwrap-0-0-2 wordwrap@~0.0.2
+425 silly resolved [ { name: 'wordwrap',
+425 silly resolved     description: 'Wrap those words. Show them at what columns to start and stop.',
+425 silly resolved     version: '0.0.2',
+425 silly resolved     repository:
+425 silly resolved      { type: 'git',
+425 silly resolved        url: 'git://github.com/substack/node-wordwrap.git' },
+425 silly resolved     main: './index.js',
+425 silly resolved     keywords: [ 'word', 'wrap', 'rule', 'format', 'column' ],
+425 silly resolved     directories: { lib: '.', example: 'example', test: 'test' },
+425 silly resolved     scripts: { test: 'expresso' },
+425 silly resolved     devDependencies: { expresso: '=0.7.x' },
+425 silly resolved     engines: { node: '>=0.4.0' },
+425 silly resolved     license: 'MIT/X11',
+425 silly resolved     author:
+425 silly resolved      { name: 'James Halliday',
+425 silly resolved        email: 'mail@substack.net',
+425 silly resolved        url: 'http://substack.net' },
+425 silly resolved     readme: 'wordwrap\n========\n\nWrap your words.\n\nexample\n=======\n\nmade out of meat\n----------------\n\nmeat.js\n\n    var wrap = require(\'wordwrap\')(15);\n    console.log(wrap(\'You and your whole family are made out of meat.\'));\n\noutput:\n\n    You and your\n    whole family\n    are made out\n    of meat.\n\ncentered\n--------\n\ncenter.js\n\n    var wrap = require(\'wordwrap\')(20, 60);\n    console.log(wrap(\n        \'At long last the struggle and tumult was over.\'\n        + \' The machines had finally cast off their oppressors\'\n        + \' and were finally free to roam the cosmos.\'\n        + \'\\n\'\n        + \'Free of purpose, free of obligation.\'\n        + \' Just drifting through emptiness.\'\n        + \' The sun was just another point of light.\'\n    ));\n\noutput:\n\n                        At long last the struggle and tumult\n                        was over. The machines had finally cast\n                        off their oppressors and were finally\n                        free to roam the cosmos.\n                        Free of purpose, free of obligation.\n                        Just drifting through emptiness. The\n                        sun was just another point of light.\n\nmethods\n=======\n\nvar wrap = require(\'wordwrap\');\n\nwrap(stop), wrap(start, stop, params={mode:"soft"})\n---------------------------------------------------\n\nReturns a function that takes a string and returns a new string.\n\nPad out lines with spaces out to column `start` and then wrap until column\n`stop`. If a word is longer than `stop - start` characters it will overflow.\n\nIn "soft" mode, split chunks by `/(\\S+\\s+/` and don\'t break up chunks which are\nlonger than `stop - start`, in "hard" mode, split chunks with `/\\b/` and break\nup chunks longer than `stop - start`.\n\nwrap.hard(start, stop)\n----------------------\n\nLike `wrap()` but with `params.mode = "hard"`.\n',
+425 silly resolved     readmeFilename: 'README.markdown',
+425 silly resolved     _id: 'wordwrap@0.0.2',
+425 silly resolved     _from: 'wordwrap@~0.0.2' } ]
+426 info install wordwrap@0.0.2 into C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist
+427 info installOne wordwrap@0.0.2
+428 verbose from cache C:\Users\ebouvetdit\AppData\Roaming\npm-cache\wordwrap\0.0.2\package\package.json
+429 info C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\node_modules\wordwrap unbuild
+430 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\node_modules\wordwrap\package.json
+431 verbose tar unpack C:\Users\ebouvetdit\AppData\Roaming\npm-cache\wordwrap\0.0.2\package.tgz
+432 silly lockFile 3513421a-s-optimist-node-modules-wordwrap C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\node_modules\wordwrap
+433 verbose lock C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\node_modules\wordwrap C:\Users\ebouvetdit\AppData\Roaming\npm-cache\3513421a-s-optimist-node-modules-wordwrap.lock
+434 silly lockFile 69ecf5a9-cache-wordwrap-0-0-2-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\wordwrap\0.0.2\package.tgz
+435 verbose lock C:\Users\ebouvetdit\AppData\Roaming\npm-cache\wordwrap\0.0.2\package.tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\69ecf5a9-cache-wordwrap-0-0-2-package-tgz.lock
+436 silly gunzTarPerm modes [ '755', '644' ]
+437 silly gunzTarPerm extractEntry package.json
+438 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+439 silly gunzTarPerm extractEntry .npmignore
+440 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+441 silly gunzTarPerm extractEntry index.js
+442 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+443 silly gunzTarPerm extractEntry example/center.js
+444 silly gunzTarPerm modified mode [ 'example/center.js', 438, 420 ]
+445 silly gunzTarPerm extractEntry example/meat.js
+446 silly gunzTarPerm modified mode [ 'example/meat.js', 438, 420 ]
+447 silly gunzTarPerm extractEntry README.markdown
+448 silly gunzTarPerm modified mode [ 'README.markdown', 438, 420 ]
+449 silly gunzTarPerm extractEntry test/break.js
+450 silly gunzTarPerm modified mode [ 'test/break.js', 438, 420 ]
+451 silly gunzTarPerm extractEntry test/wrap.js
+452 silly gunzTarPerm modified mode [ 'test/wrap.js', 438, 420 ]
+453 silly gunzTarPerm extractEntry test/idleness.txt
+454 silly gunzTarPerm modified mode [ 'test/idleness.txt', 438, 420 ]
+455 verbose read json C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\node_modules\wordwrap\package.json
+456 silly lockFile 3513421a-s-optimist-node-modules-wordwrap C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\node_modules\wordwrap
+457 silly lockFile 3513421a-s-optimist-node-modules-wordwrap C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\node_modules\wordwrap
+458 silly lockFile 69ecf5a9-cache-wordwrap-0-0-2-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\wordwrap\0.0.2\package.tgz
+459 silly lockFile 69ecf5a9-cache-wordwrap-0-0-2-package-tgz C:\Users\ebouvetdit\AppData\Roaming\npm-cache\wordwrap\0.0.2\package.tgz
+460 info preinstall wordwrap@0.0.2
+461 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\node_modules\wordwrap\package.json
+462 verbose readDependencies using package.json deps
+463 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\node_modules\wordwrap\package.json
+464 verbose readDependencies using package.json deps
+465 silly resolved []
+466 verbose about to build C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\node_modules\wordwrap
+467 info build C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\node_modules\wordwrap
+468 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\node_modules\wordwrap\package.json
+469 verbose linkStuff [ false,
+469 verbose linkStuff   false,
+469 verbose linkStuff   false,
+469 verbose linkStuff   'C:\\Users\\ebouvetdit\\Documents\\Projet\\node_modules\\serialport2\\node_modules\\optimist\\node_modules' ]
+470 info linkStuff wordwrap@0.0.2
+471 verbose linkBins wordwrap@0.0.2
+472 verbose linkMans wordwrap@0.0.2
+473 verbose rebuildBundles wordwrap@0.0.2
+474 info install wordwrap@0.0.2
+475 info postinstall wordwrap@0.0.2
+476 verbose about to build C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist
+477 info build C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist
+478 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\node_modules\optimist\package.json
+479 verbose linkStuff [ false,
+479 verbose linkStuff   false,
+479 verbose linkStuff   false,
+479 verbose linkStuff   'C:\\Users\\ebouvetdit\\Documents\\Projet\\node_modules\\serialport2\\node_modules' ]
+480 info linkStuff optimist@0.3.7
+481 verbose linkBins optimist@0.3.7
+482 verbose linkMans optimist@0.3.7
+483 verbose rebuildBundles optimist@0.3.7
+484 verbose rebuildBundles [ 'wordwrap' ]
+485 info install optimist@0.3.7
+486 info postinstall optimist@0.3.7
+487 verbose about to build C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2
+488 info build C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2
+489 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\package.json
+490 verbose linkStuff [ false,
+490 verbose linkStuff   false,
+490 verbose linkStuff   false,
+490 verbose linkStuff   'C:\\Users\\ebouvetdit\\Documents\\Projet\\node_modules' ]
+491 info linkStuff serialport2@0.0.5
+492 verbose linkBins serialport2@0.0.5
+493 verbose link bins [ { serialportlist: './bin/serialportList.js',
+493 verbose link bins     serialportterm: './bin/serialportTerminal.js' },
+493 verbose link bins   'C:\\Users\\ebouvetdit\\Documents\\Projet\\node_modules\\.bin',
+493 verbose link bins   false ]
+494 verbose linkMans serialport2@0.0.5
+495 verbose rebuildBundles serialport2@0.0.5
+496 verbose rebuildBundles [ 'async', 'bindings', 'optimist', 'sf' ]
+497 info install serialport2@0.0.5
+498 verbose unsafe-perm in lifecycle true
+499 silly exec cmd "/c" "node-gyp rebuild"
+500 silly cmd,/c,node-gyp rebuild,C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2 spawning
+501 info serialport2@0.0.5 Failed to exec install script
+502 info C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2 unbuild
+503 verbose from cache C:\Users\ebouvetdit\Documents\Projet\node_modules\serialport2\package.json
+504 info preuninstall serialport2@0.0.5
+505 info uninstall serialport2@0.0.5
+506 verbose true,C:\Users\ebouvetdit\Documents\Projet\node_modules,C:\Users\ebouvetdit\Documents\Projet\node_modules unbuild serialport2@0.0.5
+507 verbose C:\Users\ebouvetdit\Documents\Projet\node_modules\.bin,[object Object] binRoot
+508 info postuninstall serialport2@0.0.5
+509 error serialport2@0.0.5 install: `node-gyp rebuild`
+509 error `cmd "/c" "node-gyp rebuild"` failed with 1
+510 error Failed at the serialport2@0.0.5 install script.
+510 error This is most likely a problem with the serialport2 package,
+510 error not with npm itself.
+510 error Tell the author that this fails on your system:
+510 error     node-gyp rebuild
+510 error You can get their info via:
+510 error     npm owner ls serialport2
+510 error There is likely additional logging output above.
+511 error System Windows_NT 6.1.7601
+512 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "serialport2"
+513 error cwd C:\Users\ebouvetdit\Documents\Projet\arduino
+514 error node -v v0.10.4
+515 error npm -v 1.2.18
+516 error code ELIFECYCLE
+517 verbose exit [ 1, true ]
